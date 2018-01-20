@@ -1,0 +1,6 @@
+# https://superuser.com/questions/559262/how-to-disable-the-key-v-in-vi-editing-mode-against-bash
+set keymap vi-command
+"v": ""
+
+# TODO inputrc문법
+# https://www.gnu.org/software/bash/manual/html_node/Readline-Init-File-Syntax.html#Readline-Init-File-Syntax

@@ -1,0 +1,32 @@
+# common
+# ---
+.git/
+
+# lang
+# ---
+
+# javascript
+node_modules/
+*.min.*
+*.map
+
+# python
+__pycache__/
+
+# java
+*.class
+**.jar
+
+# etc
+# ---
+
+# my old
+.old/
+
+# meteor
+.meteor/
+
+# eclipse
+.settings/
+#target/
+

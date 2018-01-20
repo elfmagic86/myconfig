@@ -1,0 +1,4 @@
+
+NEOVIM_BIN=~/neovim/bin
+
+PATH="$PATH:$NEOVIM_BIN"

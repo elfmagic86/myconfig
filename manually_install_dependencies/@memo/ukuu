@@ -1,0 +1,15 @@
+
+# install kernal with ukuu
+```
+sudo ukuu --download v4.12.4
+sudo ukuu --install v4.12.4
+uname -sr
+```
+
+
+# TODO
+  - boot error
+  : watchdog: Device creation failed: -16
+
+    - 관련내용: https://forum.manjaro.org/t/acpi-errors-on-boot-after-last-kernel-4-11-update-manjaro-deepin/23760/2
+

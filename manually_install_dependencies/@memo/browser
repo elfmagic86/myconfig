@@ -1,0 +1,29 @@
+
+handwork_down_and_install
+===
+
+# browser
+: ubuntu software 프로그램에 다운 받아서 설치하는 것이 잘안되서 터미널 이용
+
+  - deb파일 download 
+  https://www.google.com/chrome/
+  http://www.opera.com/ko/computer
+
+  - folder로 이동 후 명령 실행
+  ```
+  sudo dpkg -i *.deb
+
+  # 크롬은 의존패키지 설치해줘야함
+  # --fix-broken 옵션으로 깨진 의존성 설치.
+  sudo apt-get install -f
+  ``` 
+
+  - 후처리
+    - chrome startup popup
+    : Enter password for keyring 'default' to unlock
+      그냥, 옵션체크된 상태로 현재 유저 비밀번호 입력하니 나타나지않음
+
+    - config 복구
+    : opera는 그대로 복구되고, chrome은 잘모르겠음
+      - ~/.config/googl-chrome
+      - ~/.config/opera

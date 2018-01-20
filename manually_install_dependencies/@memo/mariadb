@@ -1,0 +1,6 @@
+# server start/stop
+service mysqld start
+service mysqld stop
+
+# client connect
+mysql -u {user_name} -p

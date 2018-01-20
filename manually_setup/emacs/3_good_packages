@@ -1,0 +1,50 @@
+
+
+* projectile + neotree
+
+** projectile
+: .git~ or .projectfile 기준으로 동작하는듯함.
+
+- 설치
+-- 현재 기본설치만함.
+ myinit.org
+http://ensime.github.io/editors/emacs/hacks/
+
+-- TODO package 설치 advanced
+http://projectile.readthedocs.io/en/latest/configuration/
+
+
+- 기본키 // help   C-c p C-h
+http://projectile.readthedocs.io/en/latest/usage/
+  
+
+** neotree
+https://github.com/jaypei/emacs-neotree
+
+- 설치
+;; (add-to-list 'load-path "/some/path/neotree") // melpa로 설치햇으니 필요없겠지
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
+- 기본키
+https://www.emacswiki.org/emacs/NeoTree
+n next line ， p previous line。
+SPC or RET or TAB Open current item if it is a file. Fold/Unfold current item if it is a directory.
+g Refresh
+A Maximize/Minimize the NeoTree Window
+H Toggle display hidden files
+C-c C-n Create a file or create a directory if filename ends with a ‘/’
+C-c C-d Delete a file or a directory.
+C-c C-r Rename a file or a directory.
+C-c C-c Change the root directory.
+
+
+
+
+
+
+
+
+* TODO 아직안해봄
+# camelCase exstend
+http://www.eecs.ucf.edu/~leavens/emacs/camelCase/camelCase-mode.html

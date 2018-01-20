@@ -1,0 +1,17 @@
+
+errors
+===
+
+
+# junit 파일생성시 'createtion of element fail'
+	- 동일 에러발생상황
+	: class -> main 함수 포함한것 생성시
+
+	- 이유
+	http://java.ihoney.pe.kr/378
+
+	- 원인
+	: lombok 1.16.4 + Oxygen Release (4.7.0)
+
+	- 해결 // 그러나 현재 사용안함
+	: lombok 1.16.18 + Oxygen Release (4.7.0)

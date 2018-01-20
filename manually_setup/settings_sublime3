@@ -1,0 +1,13 @@
+
+# 환경
+# ---
+	- windows10
+
+# 설정
+# ---
+	- 한글 관련 패키지
+	convertToUTF, IMESupport
+
+# 키, 환경설정
+# ---
+	- TODO..

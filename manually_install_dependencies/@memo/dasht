@@ -1,0 +1,8 @@
+
+# dasht usage
+
+  - download api set
+  : https://kapeli.com/dash#docsets
+  ```
+  dasht-docsets-install d3
+  ```

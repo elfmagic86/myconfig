@@ -1,0 +1,83 @@
+# 단축키
+# ===
+
+NOTE: 우클릭으로 나오는 메뉴, 메뉴바의 메뉴를 참고할것. 단축키가 표시되어있고 쉽게 무슨기능인지 알수있따.
+
+# NONE
+# ---
+	C-n: new file
+
+# 윈도우 관리
+# ---
+
+	C-m: toggle full screen
+	F12: focus active editor
+
+	C-f7: 윈도우이동
+	C-3: quick access, 윈도우? 메뉴간 이동
+
+	C-0(binding): Show View(Project Explorer), show In아님
+	C-A-0(binding): Show In(Package Explorer)
+
+
+
+# 파일탐색 및 이동
+# ---
+
+	- 일반
+		A-{left|right}: 오픈된탭 이전, 이후로 이동
+		A-S-g: 인스턴스 쌍방 참조 찾기????
+		C-S-r: 파일이름으로 찾기
+
+	- 내용으로 찾기
+		C-H: 검색창, File Search 사용하고 Open Search Dialog는 없엠(C-S-H는 안됨. 다른기능이 잔뜩 걸려있음)
+
+		현재 커서의 단어, 셀렉션으로 찾기
+			C-A-g
+			C-S-l: 텍스트(regex)
+
+	- 클래스, 메서드, 상속관계등을 이용한 이동
+		F3: 커서위치의 메서드,클래스로 이동
+		C-a-h: 커서위치의 메서드, 콜히스토리
+
+	- NOUSE?
+		C-S-t: 타입검색, 파일이름이 클래스이름이기에 파일탐색과 마찬가지네
+		C-t: 커서위치의 클래스?의 계통보여줌. 이동
+		0
+
+
+
+
+# 에디터..코드관리
+# ---
+
+	- 기본
+		C-1: 퀵픽스 윈도우
+		C-d: 한줄지우기
+		C-y/C-z: redo/undo
+
+	- 이동
+		C-k: 단어기준이동, TODO 현재는 .. 범위선택을해야만됨
+		C-S-p: bracket 쌍 이동
+
+		C-{home|end}: 에디터에서 처음, 끝으로 이동하기
+		C-o: 현재 에디터 내용기준, function 등, 이름으로 이동
+
+	- 인덴트
+		C-I: correct indent
+		S-tab, tab: 탭
+
+	- replace
+		Search dialog에서
+
+
+
+# 정리안된것들
+# ---
+
+S-마우스hover: method preview 보는 기능
+: project exploere, editor toogle foucs
+
+: split 열기및 이동
+
+: C-S-w 로 창 닫을때 현재창은 남겨두는기능

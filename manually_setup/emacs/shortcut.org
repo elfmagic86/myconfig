@@ -1,0 +1,87 @@
+# 단축키 전체보기: C-h b
+# 기능찾기: C-h f
+
+
+# 현재창닫기: C-x 0 // 창이여럿이면. 현재창이 닫히고 다른창으로 포커스가이동됨.1
+
+
+//////////////////////////////////////////////////
+// emacs shortcut
+/////////////////////////////////////////////////////
+
+# 자주사용하는 단축키 // DEFAULT
+##
+- move buffer: C-x <C-<right|left>>
+- delet-window: C-x 0 // etc..maybe no use buffer close: C-x k
+- selected start/end: C-spc
+
+
+##
+- 주석: M-;?????????
+
+
+##???
+- open..buffer/file to other window
+
+## bookmark
+- C-x d ... C-x rm  // bookmark opend dired directory
+- C-x rl  : open bookmark list
+- c-x rl  ? : help.
+
+##??
+- kill ring: C-y / M-y  : to multy pasted
+
+## 
+- copy: M-w, - cut: C-w
+- paste: C-y 
+
+- redo: //TODO 뭔가동작이 이상함. 취소하면(C-g) redo가되는데...흠... undo와키는같고.
+- undo: C-_  /  C-x u  /  C-/
+
+- word select
+
+## search
+- C-s | C-r
+- C-M-s // 잘안눌림.. | C-M-r // regex search
+
+!) C-s C-w  : search by cur position word.
+
+!) come back before search location if C-g after search
+
+
+
+
+
+## del
+- del back: C-d
+- del forward: backspace  // no other command, use with repeat command
+- del line: C-k // if want del whole, move (C-a
+ :: C-M d// in myinit.org
+
+
+##
+- switch window: C-x o // no number
+
+## scrolling
+- page up/down: C-v  /  M-v
+- center focusing: C-l // no number
+- ORTHER up/down: C-M-S-v   /  C-M-v    // S is Shift
+- Move END/FIRST scroll: M-<  / M-> 
+
+# 자주사용할것같은 단축키 //기능이 다르지만.
+
+- repeat: C 1~0 <command>   |  C-u <number> <command>
+- 엔터:c-m, c-o // no move 
+
+
+# but no many using.
+- all select: C-x h
+- FixWord?
+
+# 필요한 기능, 및 단축키 찾기
+## text
+- search all: C-h f
+- search all(known shortcut): c-h a
+
+## 키조합
+- search by command text: C-h k

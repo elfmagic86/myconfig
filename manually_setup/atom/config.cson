@@ -1,0 +1,28 @@
+"*":
+	"autocomplete-plus":
+		core:
+			ignoredNames: [
+				".git"
+				".hg"
+				".svn"
+				".DS_Store"
+				"._*"
+				"Thumbs.db"
+				"desktop.ini"
+				"node_modules"
+			]
+			fileBlacklist: [
+				"*.vue"
+				"*.js"
+			]
+	editor:
+		atomicSoftTabs: false
+		confirmCheckoutHeadRevision: false
+		scrollPastEnd: true
+		showIndentGuide: true
+		showInvisibles: true
+		softTabs: false
+		tabLength: 4
+		tabType: "hard"
+	welcome:
+		showOnStartup: false

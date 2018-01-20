@@ -1,0 +1,129 @@
+# !! check init file loc
+: https://www.emacswiki.org/emacs/InitFile
+
+ - my error
+: modified instancely. init.el. why?
+  exist... ~/.emacs file.   how known?
+  modify option. save optoins. -> !! statusbar show `wrote ~~ .emacs`
+
+
+
+# how to run
+- m-x eval-buffer: run cur file // open init.el
+- c-x c-e: run..LINE
+
+
+
+
+# setting. //use customise .org file.
+1) use myInit.org
+: http://cestlaz.github.io/posts/using-emacs-10-org-init/#.WFOkdYh97DE
+- It seems to create myInit.el if complete eval-buffer.
+
+?) fail init fail?
+: org파일에 코드블락을 제대로 안줘서 실패했던거. // 동영상ㅊ마조.
+
+   myinit.org : org규약에 맞게 코드를 노출해줘야함. 그래야 오류안남.
+
+
+
+# 적용안한거.
+;; ============================================================================
+;; 최근 열었던 파일 가져오기
+;; ============================================================================
+
+(recentf-mode 1)
+
+;; 최근열었던 파일 1200까지 저장하기
+(setq recentf-max-saved-items 1200)
+
+;; 제외할 파일
+(add-to-list 'recentf-exclude "Temporary Internet Files")
+(add-to-list 'recentf-exclude "/.emacs.d/recentf")
+
+;; 자동 저장기능 활성화
+;; (setq recentf-auto-save-timer
+;;   (run-with-idle-timer 60 t 'recentf-save-list))
+
+(global-set-key [f12] 'recentf-open-files)
+
+
+;; Finding Files and URLs at Point
+;; ============================================================================
+
+(require 'ffap)
+
+;;(setq ffap-newfile-prompt t)
+
+(ffap-bindings)
+
+(setq ffap-string-at-point-mode-alist
+      (cons
+       ;; 허용되는 파일명 문자에서 물음표 제외
+       '(file "--:\\\\${}+<>@-Z_[:alpha:]~*" "<@" "@>;.,!?:")
+       ;; (file "--:\\\\${}+<>@-Z_[:alpha:]~*?" "<@" "@>;.,!:")
+       ffap-string-at-point-mode-alist))
+
+
+
+;; ;; 제외할 모드 설정
+;; ;; (C-h v major-mode RET 로 mode 이름을 확인할 수 있다.)
+;; (setq linum-disabled-modes-list '(eshell-mode wl-summary-mode compilation-mode help-mode cfw:calendar-mode calendar-mode))
+
+
+
+;; ============================================================================
+;; 선택 영역 검색
+;; ===========================================================================
+?? 필요할까?
+
+
+;; =============================================================================
+;; auto-complete
+;; (필요 : melpa, auto-complete)
+;; =============================================================================
+
+(use-package auto-complete
+  :ensure t)
+
+(require 'auto-complete-config)
+
+;; 자동완성 활성화
+(global-auto-complete-mode t)
+
+;; 2글자 입력시 자동완성 시작
+(setq ac-auto-start 2)
+
+;; 0.1 초 후 목록 표시함
+(setq ac-auto-show-menu 0.1)
+
+(ac-config-default)
+
+;; TAB 키 누르면 자동완성 시작
+(ac-set-trigger-key "TAB")
+
+
+
+;; =============================================================================
+;; browse-kill-ring
+;; (필요 : MELPA, browse-kill-ring)
+;; =============================================================================
+
+
+
+;; =============================================================================
+;; prog mode 설정하기(emacs 24+ only)
+;; =============================================================================
+
+(add-hook 'prog-mode-hook
+  (lambda ()
+    ;; 들여쓰기 할 때 실제 탭문자 입력
+    (setq indent-tabs-mode t)
+    ;; 탭 사이즈 4
+    (setq tab-width 4)
+    ;; 대응하는 괄호 표시
+    (show-paren-mode t)
+    ;; 엔터 입력시 들여쓰기
+    (local-set-key (kbd "RET") 'newline-and-indent)
+    ))
+

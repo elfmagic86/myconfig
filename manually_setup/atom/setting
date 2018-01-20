@@ -1,0 +1,5 @@
+- TODO 현재 설정 복사하는 방법은?
+
+- TODO package install은 수작업?
+	atom-ide-ui/  editorconfig/  ide-css/   ide-java/  ide-vue/        language-vue/  vue-hyperclick/
+	auto-indent/  hyperclick/    ide-html/  ide-json/  js-hyperclick/  README.md

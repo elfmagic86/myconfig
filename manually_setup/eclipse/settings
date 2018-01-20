@@ -1,0 +1,25 @@
+  
+환경: jee-oxygen java EE 
+
+- 기본설정
+  - preference - installed jre -> jdk
+		- text font크기변경
+    - TextEditors
+      - show white space(메뉴에있음)
+		- window -> preference -> workspace -> encoding - utf-8
+
+
+		- node_modules 검색대상에서 무시
+		https://blog.outsider.ne.kr/789
+
+		- shortcut 참고하여 몇가지 바인딩
+
+    - eclipse other sync filesystem
+    https://stackoverflow.com/questions/6626703/eclipse-source-out-of-sync-with-file-system
+    menu -> preference -> workspace -> refresh ....hooks or polling
+
+    ?? 이게뭐였더라
+		- Toggle Breadcrumb
+
+- validation 등 불필요한것 제거
+: http://egloos.zum.com/jaures/v/2290270

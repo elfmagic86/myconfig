@@ -1,0 +1,7 @@
+
+# for powerline
+#export POWERLINE_COMMAND=powerline
+#export POWERLINE_CONFIG_COMMAND=powerline-config
+#if [[ -f /usr/local/lib/python3.4/dist-packages/powerline/bindings/bash/powerline.sh ]]; then
+  #source /usr/local/lib/python3.4/dist-packages/powerline/bindings/bash/powerline.sh
+#fi

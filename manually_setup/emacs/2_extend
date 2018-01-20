@@ -1,0 +1,26 @@
+
+
+* ready
+: 바른 위치의 init파일.
+: 바른 package url설정이 필ㅇ함
+
+0) initfile
+: https://www.emacswiki.org/emacs/InitFile#init_file
+: ~/.emacs.d/init.el // 기본 init 위치임.
+  
+1) repository //설명
+: https://www.emacswiki.org/emacs/ELPA
+
+
+* 특정 package install 하는 방법.
+1) M-x packages-install // use 기본제공.
+2) M-x list-packages // use mepl 
+:init.el에 mepl url이 add to list로 잇어야함.
+
+3) 위에서 찾고.. I 누르면 체크됨. 
+4) x누르면 설치됨.
+
+
+
+* advance?? // using local pacakges.
+:https://www.emacswiki.org/emacs/LocalElpaArchive

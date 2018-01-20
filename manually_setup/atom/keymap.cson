@@ -1,0 +1,30 @@
+# Your keymap
+'atom-workspace':
+
+	# '`' : 'whitespace:convert-spaces-to-tabs'
+
+	'ctrl-shift-S' : 'window:save-all'
+	'shift-ctrl-W' : 'pane:close-other-items'
+
+
+	'ctrl-0' : 'tree-view:toggle-focus'
+	'ctrl-alt-0' : 'tree-view:reveal-active-file'
+	'f12': 'window:focus-pane-on-right'
+
+	'ctrl-z' : 'core:undo'
+	'ctrl-y' : 'core:redo'
+
+
+	'shift-delete' : 'editor:delete-line'
+	'shift-backspace' : 'editor:delete-line'
+	'ctrl-delete': 'editor:delete-to-end-of-subword'
+	'ctrl-backspace': 'editor:delete-to-beginning-of-subword'
+
+	'ctrl-up': 'editor:move-line-up'
+	'ctrl-down': 'editor:move-line-down'
+
+	'shift-ctrl-up':'editor:duplicate-lines'
+	'shift-ctrl-down':'editor:duplicate-lines'
+
+	# 브래킷이동
+	'ctrl-m': 'bracket-matcher:go-to-matching-bracket' # Bracket Matcher	atom-text-editor
