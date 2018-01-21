@@ -59,7 +59,8 @@ func! s:load_plugins()
 
 	call dein#add('scrooloose/nerdtree')
 
-	call dein#add('Shougo/denite.nvim')
+	call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
+	call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 
 	" todo: https://gabri.me/blog/multiple-files-search-and-replace-in-vim/
 	call dein#add('dyng/ctrlsf.vim')
