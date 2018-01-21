@@ -84,9 +84,13 @@ func! s:fzf_open_with_word(...)
         return 0
     endif
 
+	let ag_query = 'ag --hidden -U --nogroup --column --color ' . shellescape(query)
     let fzf_preview_opts = fzf#vim#with_preview('right:50%', '?')
+	echo l:ag_query
+
+	" fzf#vim#grep(command, with_column, [options], [fullscreen])
     let Fzf_action = {->
-                \ fzf#vim#ag(query, fzf_preview_opts)
+                \ fzf#vim#grep(ag_query, 1, fzf_preview_opts)
                 \ }
     call s:open_file_hook(Fzf_action)
 endfunc
