@@ -15,6 +15,7 @@ main() {
 	cd $ROOT_PATH
 	# 인자 없는 명령은 mode구분이 아직 없다
 	deploy_dotfiles
+	deploy_dotfiles_direct_location
 	deploy_bin
 	deploy_bashrc
 	deploy_vimrc
@@ -36,6 +37,14 @@ deploy_dotfiles() {
 				;;
 		esac
 	done
+}
+
+deploy_dotfiles_direct_location() {
+    local src_path=$ROOT_PATH/dotfiles_direct_location
+
+    # awesoem
+    mkdir -p $HOME/.config/awesome
+    ln --symbolic --force --no-dereference  $src_path/awesome/rc.lua $HOME/.config/awesome/rc.lua
 }
 
 deploy_bin() {
