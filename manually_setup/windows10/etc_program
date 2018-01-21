@@ -1,0 +1,26 @@
+- 서브라임3
+- java, eclipse
+
+- workbench, putty, filezilla
+
+- slack
+
+- 7zip
+
+- 썬더버드
+	1. 5.0 설치(FireTray 플러그인 설치위해)
+	 https://archive.mozilla.org/pub/thunderbird/releases/50.0b3/win32/ko/
+
+	2. 메뉴 -> 부가기능 -> FireTray 설치
+
+	3. auto start
+	: 시작프로그램
+
+	4. 재시작
+
+- wox(like alfred's) // 잘안씀 지울듯
+: https://github.com/Wox-launcher/Wox/releases
+	- alt + space
+
+
+- bugn // 불편하다... 시간되면 다시 시도...

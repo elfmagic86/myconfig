@@ -1,0 +1,12 @@
+ Vue 개발자도구
+
+- elasticsearch head
+
+- vimium
+  # Insert your preferred key mappings here.
+  map <c-d> scrollPageDown
+  map <c-u> scrollPageUp
+  map <a-p> previousTab
+  map <a-n> nextTab
+
+- tooltip dictionary

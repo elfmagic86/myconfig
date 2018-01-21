@@ -1,0 +1,63 @@
+# 윈10 기본설정
+# ===
+
+- 윈빌드버전, 1703
+	- 확인: cmd -> winver
+
+- 업데이트설정
+	- 현빌드(1703) 에서는 services.msc의 windows update가 수동으로 되어있다. 중지만 한번해줌
+
+	- 더 귀찮아지면 더 찾아볼것.
+
+
+- 마우스
+	- 속도
+	- 정확도 x
+	: 그래야 미세움직임에 반응함
+
+	- 스클로방향
+	: 마우스 고급 -> 터치패드설정 -> 스크롤방향 반전 취소
+	  역방향은 모바일처럼 컨텐츠가 움직이는것, 순방향은 스크롤이 우밎긴능넌것
+
+- 키보드 키기능 변경
+	- capslock to escape + LG gram키보드 설정변경(home, end ...)
+	: autohotkey 설치해서 스크립트 등록. 이게 제일편함.
+	  change_key.ahk를 시작프로그램으로 넣어서 자동시작하게 설정
+
+- 키보드 속도변경.
+: https://superuser.com/questions/1077223/windows-10-keyboard-repeat-rate-delay-keeps-changing
+```
+  regedit.exe
+
+  [HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response]
+  "AutoRepeatDelay"="200"
+  "AutoRepeatRate"="6"
+  "DelayBeforeAcceptance"="0"
+  "Flags"="59"
+  "BounceTime"="0"
+```
+
+- 스케줄 된 프로그램 제어
+: cmd -> taskschd.msc
+
+
+- 윈도우(창) 설정값
+:cmd.exe, bash 등...
+
+	- 스크롤 설정
+	:우클릭 -> 속성(and 기본값) -> 레이아웃 -> 화면버퍼 height 9999
+
+	- font, 불투명도
+	 - 터미널에서 지원하는 폰트를 수동으로 변경한다.
+	 : 우클릭 -> 속성(기본값도) -> 글꼴
+		bash.exe
+		- font: Consolas, 16, bold
+		- 투명도 93, 배경 (50,50,50)
+
+
+# WSL
+===
+: WSL Windows 10 Bash
+
+	- 설치는 따라하면됨
+	http://sanghaklee.tistory.com/39
