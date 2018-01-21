@@ -12,7 +12,6 @@ programs=(
     curl
     openssh-server
     git
-    silversearcher-ag
     lynx
     htop
     tree
