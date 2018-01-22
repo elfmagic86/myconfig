@@ -19,12 +19,8 @@ PATH="$PATH:/opt/scala-2.12.0/bin"
 PATH="$PATH:$HOME/.local/bin"
 
 # nvm
-# slow startup: https://github.com/creationix/nvm/issues/539#issuecomment-245791291
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use # This loads nvm
-
-alias node='unalias node ; unalias npm ; nvm use default ; node $@'
-alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 # tmuxinator
 export EDITOR='vim'

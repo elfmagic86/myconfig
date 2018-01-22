@@ -40,11 +40,14 @@ task_deploy() {
 	#vimrc
 	mkdir -p $DEST_ROOT_PATH
 
+	rm -rf $DEST_ROOT_PATH/autoload
+	rm -rf $DEST_ROOT_PATH/vimrc
 	ln --symbolic --force --no-dereference $SRC_PATH/autoload $DEST_ROOT_PATH/autoload
 	ln --symbolic --force --no-dereference $SRC_PATH/vimrc.vim $DEST_ROOT_PATH/vimrc
 
 	# neovim
 	mkdir -p ~/.config/nvim
+	rm -rf ~/.config/nvim/init.vim
 	ln --symbolic --force --no-dereference $SRC_PATH/nvimrc.vim ~/.config/nvim/init.vim
 }
 

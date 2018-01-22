@@ -81,3 +81,5 @@ S-마우스hover: method preview 보는 기능
 : split 열기및 이동
 
 : C-S-w 로 창 닫을때 현재창은 남겨두는기능
+
+- Remove unused importst: C-S-o

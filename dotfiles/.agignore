@@ -21,7 +21,8 @@ __pycache__/
 # ---
 
 # my old
-.old/
+.old/doc/
+.old/project/
 
 # meteor
 .meteor/

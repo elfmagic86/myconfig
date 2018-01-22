@@ -83,7 +83,11 @@ func! s:setup_basic()
 	set pastetoggle=<F2>
 	"set paste "auto comment, autoindent 전부막는것이라 사용안함
 
-	" auto wrap
-	set wrap
-	set textwidth=80
+	" nowrap
+	set nowrap
+	set textwidth=0 wrapmargin=0
+
+	" TODO dos2unix
+	autocmd InsertEnter,InsertLeave *.bash setlocal ff=unix
+	autocmd InsertEnter,InsertLeave *.sh setlocal ff=unix
 endfunc
