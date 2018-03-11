@@ -33,6 +33,7 @@ deploy_dotfiles() {
 		case "$name" in
 			.gitignore) ;;
 			*)
+				rm -rf $HOME/$name
 				ln --symbolic --force --no-dereference $dotfile $HOME/$name
 				;;
 		esac
@@ -56,6 +57,7 @@ deploy_bin() {
 	done
 
 	# link
+	rm -rf $HOME/bin
 	ln --symbolic --force --no-dereference $ROOT_PATH/bin $HOME/bin
 }
 

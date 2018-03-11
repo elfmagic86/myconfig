@@ -1,7 +1,10 @@
-  
-환경: jee-oxygen java EE 
 
-- 기본설정
+환경:
+	- Windows10
+	- jee-oxygen java EE
+
+
+# 기본설정
   - preference - installed jre -> jdk
 		- text font크기변경
     - TextEditors
@@ -21,5 +24,39 @@
     ?? 이게뭐였더라
 		- Toggle Breadcrumb
 
-- validation 등 불필요한것 제거
+# validation 등 불필요한것 제거
 : http://egloos.zum.com/jaures/v/2290270
+
+
+# plugins
+	- buildship
+
+
+# 추가설정
+	- lombok
+	:TODO 정리
+
+	- spring-reloaded
+	: https://beyondj2ee.wordpress.com/2015/10/24/%EB%B9%A0%EB%A5%B8-%EC%83%9D%EC%82%B0%EC%84%B1%EC%9D%84-%EC%9C%84%ED%95%B4%EC%84%9C-%EC%9E%AC%EA%B8%B0%EB%8F%99-%EC%97%86%EC%9D%B4-%EC%84%9C%EB%B2%84-hot-swapping-%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95/
+		TODO 안되서 HotSwapAgent를 사용함
+
+	- HotSwapAgent
+
+		- 아래 링크의 install 참고하여 설치
+		:http://hotswapagent.org/mydoc_quickstart.html
+		> hotswap-agent-1.0.jar, DCEVM-8u144-installer.jar, jdk-8u144-windows-x64
+
+		- eclipse wtp 톰캣 적용
+		: http://hotswapagent.org/mydoc_setup_eclipse.html
+
+			- Server -> Modules -> Auto Reload: disabled
+			- Server -> Server Options -> Modules auto reload by default: check only it
+			- Server -> Open launch configuration -> VM arguments
+			```
+			-XXaltjvm=dcevm -javaagent:D:\kang\programs\dcevm\hotswap-agent-1.0.jar
+			```
+
+		- 주의
+			- 타임아웃
+			: decvm에 등록하는 작업이 오래걸려서 타임아웃 에러가 날수있음.
+			  Server -> timout 에서 변경.

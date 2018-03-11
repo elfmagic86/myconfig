@@ -15,3 +15,12 @@ errors
 
 	- 해결 // 그러나 현재 사용안함
 	: lombok 1.16.18 + Oxygen Release (4.7.0)
+
+
+# ... /m2e-wtp/web-resources/META-INF/MANIFEST.MF (No such file or directory)
+: https://stackoverflow.com/questions/14659891/m2e-wtp-error-path-target-m2e-wtp-web-resources-meta-inf-manifest-mf-no-such
+>Eclipse Luna and later
+>For Eclipse Luna you have to go:
+>Preferences > Maven > Java EE Integration and uncheck "Maven Archiver generates files under the build directory".
+>Eclipse Luna does not have the path at project Properties and the WTP section
+

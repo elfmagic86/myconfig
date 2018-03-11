@@ -3,3 +3,8 @@
 - TODO package install은 수작업?
 	atom-ide-ui/  editorconfig/  ide-css/   ide-java/  ide-vue/        language-vue/  vue-hyperclick/
 	auto-indent/  hyperclick/    ide-html/  ide-json/  js-hyperclick/  README.md
+
+- 자동완성 관련..
+	autocomplete-plus settings -> blacklist -> *.js 등으로 막을수있다.
+
+	- Keymap comfirming a suggestion: enter

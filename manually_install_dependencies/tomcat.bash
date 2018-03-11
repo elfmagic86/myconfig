@@ -3,13 +3,15 @@
 
 # 설치
 cd /tmp
+
+# 다운로드 페이지에는 extra, core 등이 있고, core가 원하는것.
 wget http://mirror.navercorp.com/apache/tomcat/tomcat-8/v8.5.20/bin/apache-tomcat-8.5.20.tar.gz
 tar -xzvf apache-tomcat-8.5.20.tar.gz
 sudo mv /tmp/apache-tomcat-8.5.20 /opt/tomcat
 
 
 # 실행하기(path설정할것)
-    # $ $CATALINA_HOME/bin/startup.sh 
+    # $ $CATALINA_HOME/bin/startup.sh
     # 포트확인
     # $ netstat -plntu
 

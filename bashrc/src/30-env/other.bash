@@ -18,16 +18,8 @@ PATH="$PATH:/opt/scala-2.12.0/bin"
 # elastic beanstack cli
 PATH="$PATH:$HOME/.local/bin"
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
 # tmuxinator
 export EDITOR='vim'
-
-# rvm
-export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # dasht
 export PATH=$PATH:~/.dasht/bin

@@ -118,12 +118,13 @@ func! s:load_plugins()
 	" ---
 
 	" term
-	call dein#add('Shougo/deol.nvim')
+	" extention/
 
 	" color
 	call dein#add('junegunn/seoul256.vim')
 
-	" status
+	" statusline, tabline
+	call dein#add('ap/vim-buftabline')
 	call dein#add('itchyny/lightline.vim')
 
 	" editorconfig
