@@ -9,6 +9,8 @@
 node_modules/
 *.min.*
 *.map
+## webpack dist
+dist/
 
 # python
 __pycache__/

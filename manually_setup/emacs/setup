@@ -1,0 +1,41 @@
+# setup
+# ===
+
+환경: windows10
+
+# 설정
+	- emacs설치
+	: https://github.com/syl20bnr/spacemacs#windows
+	  emacs-w64-25.3-O2-with-modules
+
+		- bin/emacs.exe 로 실행함
+
+	- spacemacs config 설정
+
+	  - 환경변수에 HOME을 위의 경로(절대경로) 설정할것
+
+	  - 다운로드하고 ~/.emacs.d/ 에 내용을 옮김
+	  : http://spacemacs.org/
+
+	- 패키지 인스톨
+	: 위의 설정 후 emacs를 실행시킴
+		- 물어보는 단계 적절히 선택하여 필요 패키지를 받음
+
+
+	- 추가
+		- ag설치
+		: https://simpletutorials.com/c/2919/How+to+setup+AG+%28Silver+Searcher%29+to+find+text+in+files+in+Spacemacs+on+Windows
+			- win용 다운, 환경변수설정
+			- .spacemacs 설정추가
+			```
+			(setq helm-ag-base-command "ag --vimgrep")
+			```
+
+		- TODO font: splash 화면 참고
+
+# layer 추가설정
+	- 각 layer의 README.org 확인하여 필요한것 설치
+
+## TODO
+	- :!ls 와같은 외부명령
+	: wsl의 bash 사용못하나?

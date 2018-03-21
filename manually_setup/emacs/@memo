@@ -1,0 +1,28 @@
+
+
+# tutorial
+	- M-x evli-tutor-start
+	: vim 튜토리얼과 비슷함
+
+	- https://medium.com/@jaysoifer/vim-and-emacs-spacemacs-dc874d10b455
+
+		- 몇가지기록
+		: 이맥스의 확장 명령은 M-x로 찾을수있다.
+		  spacemacs의 SPC은 evli에 필요한 명령을 wrapping한 vim의 leader키 역할
+
+
+# conf
+: https://www.emacswiki.org/emacs/InitFile#init_file
+  ~/.emacs.d/init.el
+
+# package
+	- repository 설명
+	: https://www.emacswiki.org/emacs/ELPA
+
+	- (old) 특정 package 설치
+		1) M-x packages-install // use 기본제공.
+		2) M-x list-packages // use mepl
+		:init.el에 mepl url이 add to list로 잇어야함.
+
+		3) 위에서 찾고.. I 누르면 체크됨.
+		4) x누르면 설치됨.

@@ -1,8 +1,15 @@
 - TODO 현재 설정 복사하는 방법은?
 
 - TODO package install은 수작업?
+: apm install ... 찾아볼것
+
+	- 현재목록
 	atom-ide-ui/  editorconfig/  ide-css/   ide-java/  ide-vue/        language-vue/  vue-hyperclick/
 	auto-indent/  hyperclick/    ide-html/  ide-json/  js-hyperclick/  README.md
+
+	- 추가
+	iproject-manager
+
 
 - 자동완성 관련..
 	autocomplete-plus settings -> blacklist -> *.js 등으로 막을수있다.

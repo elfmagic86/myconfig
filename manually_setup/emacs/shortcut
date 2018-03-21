@@ -1,0 +1,112 @@
+# shortcut(spacemacs 우선)
+# ===
+
+# help
+# ---
+	- dotfile(~/.spacemacs) 수정
+	: SPC f e d
+	: M-x spacemacs/find-dotfile
+
+		- 유저설정은 아래위치에..
+		(defun dotspacemacs/user-config ()
+
+		- dotfile reload
+		: SPC f e R
+
+	- restart
+	: SPC q r
+
+	- slash 화면
+	: 이력(프로젝트 or file)이 화면하단에있다.
+
+# 공통 기본
+# ---
+	- 명령창
+		- M-x or SPC SPC
+
+	- C-g: (현재)명령취소
+
+	- 메뉴창?에서의 up/down 이동
+		- C-{j | k}
+
+	- 종료
+		- SPC q q	or	:q
+		- 재시작: SPC q r
+
+
+
+# move and manage
+# ---
+# project(cwd) 변경
+	- SPC p p
+	: 아직
+
+# 윈도우 관리
+	- 윈도우이동:
+		C-w    {h | j | k | l}
+		SPC w  {h | j | k | l}
+		: neotree에서 C-w사용시 파일선택이됨..
+
+	- 윈도우 생성(현재파일로)
+
+		- SPC w {v | s}
+		: 대문자시 포커스도 새윈도우로 이동됨
+
+	- 윈도우 닫기
+		- SPC w d
+		: 대문자시 닫을 윈도우 문자로 선택함
+
+	- 윈도우 미니버퍼
+	: ? 안됨
+
+		SPC w b
+
+# 파일관리
+	# 파일 생성,삭제
+		- neotree
+		: https://github.com/jaypei/emacs-neotree/issues/226
+			- c, d로 생성삭제할수있지만 매번 SPC f e R을 해야동작한다..
+
+		- dired
+			- SPC f c
+			- SPC f d
+	# 파일 저장
+		- SPC f s
+		- :w
+
+	# 파일, 탐색
+
+	- 디렉토리이동하면서 파일찾기
+		- neotree toggle: SPC p t
+		- dired
+			- SPC a d
+			- SPC f f
+
+	- fuzzy search
+		- SPC p f	: filename search
+
+		- SPC s p	: content search # ag 등 설치가필요함
+
+
+# 버퍼관리
+	- 버퍼리스트: SPC b b
+	- move buffer: C-x <C-<right|left>>
+
+	- 버퍼닫기
+		- 현재 파일 하나
+		: SPC b d
+		: :bd
+
+		- 현재파일제외 모두
+		: SPC b m
+
+	- 스크래치 버퍼(??)
+	: SPC b s
+		- http://ergoemacs.org/emacs/modernization_scratch_buffer.html
+
+
+
+# 파일: 이동
+
+# editing
+# ---
