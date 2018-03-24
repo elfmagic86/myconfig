@@ -23,27 +23,30 @@ main() {
 
 	cd $ROOT_PATH
 
-	install_dein_if_not_exists
+	install_plug_if_not_exists
 	task_deploy
 }
 
-install_dein_if_not_exists() {
-	vim_dein_dir=~/.vim/dein
-	if [ ! -d $vim_dein_dir ]; then
-		curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/installer.sh
-		sh /tmp/installer.sh $vim_dein_dir
+install_plug_if_not_exists() {
+	plug_vim=~/.vim/autoload/plug.vim
+	if [ ! -f $plug_vim ]; then
+		curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+			https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	fi
 }
 
 # NOTE 기존것 지우고 현재버전을 복사한다.
 task_deploy() {
-	#vimrc
+	# vim
 	mkdir -p $DEST_ROOT_PATH
 
-	rm -rf $DEST_ROOT_PATH/autoload
+	# 1.vimrc
 	rm -rf $DEST_ROOT_PATH/vimrc
-	ln --symbolic --force --no-dereference $SRC_PATH/autoload $DEST_ROOT_PATH/autoload
 	ln --symbolic --force --no-dereference $SRC_PATH/vimrc.vim $DEST_ROOT_PATH/vimrc
+
+	# 2. myvimrc
+	rm -rf $DEST_ROOT_PATH/autoload/myvimrc
+	ln --symbolic --force --no-dereference $SRC_PATH/myvimrc $DEST_ROOT_PATH/autoload/myvimrc
 
 	# neovim
 	mkdir -p ~/.config/nvim
