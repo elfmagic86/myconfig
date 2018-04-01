@@ -3,7 +3,7 @@
 
 # ENV: Xenial 16.04 (LTS), x86_64(amd64)
 
-# add repository 
+# add repository
 # ---
 
 # Install packages to allow apt to use a repository over HTTPS
@@ -39,11 +39,12 @@ sudo apt-get install docker-ce
 # optional
 # ===
 
-# no sudo
+# docker에 sudo 권한주기, 권한 준 후 재로긴필요
 sudo groupadd docker
 sudo usermod -aG docker $USER
 
-# no autostart 
+
+# no autostart
 # : 시작하기 위해서 단순히 docker 명령을 사용하면됨.
 sudo systemctl disable docker
 

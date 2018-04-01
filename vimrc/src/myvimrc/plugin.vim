@@ -56,36 +56,47 @@ func! s:load_plugins()
 	" ---
 	" autocomplete
 	" ---
+	function! BuildYCM(info)
+	  " info is a dictionary with 3 fields
+	  " - name:   name of the plugin
+	  " - status: 'installed', 'updated', or 'unchanged'
+	  " - force:  set on PlugInstall! or PlugUpdate!
+	  if a:info.status == 'installed' || a:info.force
+		!./install.py
+	  endif
+	endfunction
 
-	if has('nvim')
-		Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-	else
-		Plug 'Shougo/deoplete.nvim'
-		Plug 'roxma/nvim-yarp'
-		Plug 'roxma/vim-hug-neovim-rpc'
-	endif
-
+	Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+	" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 	" Java autocomplete
 	" Plug 'artur-shaik/vim-javacomplete2'
-	Plug 'dansomething/vim-eclim'
+
+	" https://github.com/junegunn/vim-plug/issues/32
+	" ~/.vim/plugged/eclim에 설치해야함
+	Plug g:plug_home.'/eclim'
+
 
 	" ---
 	" lint
 	" ---
 	" todo
-	" Plug 'w0rp/ale'
+	Plug 'w0rp/ale'
 
 
 	" ---
 	" lang
 	" ---
 
+	" js
+	Plug 'pangloss/vim-javascript'
 	" vue
 	Plug 'posva/vim-vue'
 
-	" js, mjs ...
-	Plug 'pangloss/vim-javascript'
+	" ---
+	" ctags? Ggrep?
+	" ---
+	" TODO ...
 
 	" ---
 	" etc
