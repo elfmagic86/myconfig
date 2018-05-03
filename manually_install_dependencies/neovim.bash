@@ -1,4 +1,10 @@
 
+
+# ERROR
+echo "v0.2.2 빌드 이슈...."
+echo "https://github.com/neovim/neovim/issues/8056"
+
+
 #
 # install
 # ---

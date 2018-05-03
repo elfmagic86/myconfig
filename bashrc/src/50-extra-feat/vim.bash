@@ -16,4 +16,4 @@ vim_clean_backup() {
 
 
 alias nv='vim_open_nvim'
-alias v='vim'
+alias vim='vim_open_nvim'

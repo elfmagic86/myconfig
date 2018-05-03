@@ -9,7 +9,6 @@ programs=(
     pulseaudio pavucontrol
 
     # basic utils
-    curl
     openssh-server
     git
     lynx
@@ -41,3 +40,9 @@ sudo apt-get update
 # ---
 # add-apt-repository
 sudo apt-get install -y "${programs[@]}"
+
+
+
+
+# TODO path..
+# bash $(pwd)/basic/curl.bash
