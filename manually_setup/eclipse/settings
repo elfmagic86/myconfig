@@ -24,6 +24,11 @@
     ?? 이게뭐였더라
 		- Toggle Breadcrumb
 
+
+	- word boundaries 변경하기.(기본 카멜케이스)
+	https://stackoverflow.com/questions/4399102/configure-eclipse-word-boundaries-so-next-word-key-skips-whole-identifier
+	> java Editor와 일반 Editor의 `Smart caret positioning at line start and end` 해제
+
 # validation 등 불필요한것 제거
 : http://egloos.zum.com/jaures/v/2290270
 

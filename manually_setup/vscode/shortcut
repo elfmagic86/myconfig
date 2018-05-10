@@ -1,8 +1,95 @@
 
 # shortcut
 # ===
+https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+
+일반
+---
+	Ctrl+Shift+P, F1 Show Command Palette
 
 
+	Ctrl+Shift+E Show Explorer / Toggle focus
+	Ctrl+Shift+F Show Search
+	Ctrl+Shift+U Show Output panel
 
-	- Organize Import: <A-S>o
+
+	C-`	open terminal
+
+탐색기
+---
+	C-0 탐색기로 포커스
+	C-\ 탐색기 토글
+
+window
+---
+	- open/close
+		Ctrl+P Quick Open, Go to File…
+		Ctrl+Shift+W Close window/instance
+
+		Ctrl+Shift+T Reopen closed editor
+	- move
+		Alt+Left	Focus Previous Pane
+		Alt+Right	Focus Next Pane
+
+		?? Ctrl+T Show all Symbols
+
+		Ctrl+Shift+Tab Navigate editor group history
+
+editing
+---
+
+	- find / replace
+		Ctrl+F Find
+		Ctrl+H Replace
+		A-enter find한것 모두 선택(multi cursor)
+		Ctrl+K Ctrl+D Move last selection to next Find match
+
+	- multi cursor
+		Ctrl+Alt+ ↑ / ↓ Insert cursor above / below
+		Ctrl+U Undo last cursor operation
+
+	- line
+		Ctrl+X Cut line (empty selection)
+		Ctrl+Shift+K Delete line
+
+		Alt+ ↑ / ↓ Move line up/down
+		Shift+Alt + ↓ / ↑ Copy line up/down
+
+		- vi의 o/O와 같음
+			Ctrl+Enter Insert line below
+			Ctrl+Shift+Enter Insert line above
+
+
+	- bracket
+	Ctrl+M Jump to matching bracket
+
+
+	- indent
+	Ctrl+] / [ Indent/outdent line
+
+	- comment
+	C-/
+
+code help
+---
+	Organize Import: <A-S>o
+
+	auto indent: <A-S>f
+
+	Ctrl+. Quick Fix
+	Shift+F12 Show References
+
+
+--------------------------
+잘사용안하는것
+
+	- fold
+		Ctrl+Shift+[ Fold (collapse) region
+		Ctrl+Shift+] Unfold (uncollapse) region
+		Ctrl+K Ctrl+[ Fold (collapse) all subregions
+		Ctrl+K Ctrl+] Unfold (uncollapse) all subregions
+		Ctrl+K Ctrl+0 Fold (collapse) all regions
+		Ctrl+K Ctrl+J Unfold (uncollapse) all regions
+
+
 
