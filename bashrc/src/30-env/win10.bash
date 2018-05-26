@@ -15,5 +15,5 @@ PATH="$PATH:$WIN10_MY_BIN"
 # 윈도우용 공용접근 폴더
 winpath() {
 	local wslpath=$1
-	echo $(wslpath -r -s -w $wslpath)
+	echo $(wslpath -w $wslpath)
 }

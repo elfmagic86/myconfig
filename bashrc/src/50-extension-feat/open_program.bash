@@ -9,7 +9,7 @@ open_filemanager() {
     local path=${1:-.}
 
     if $IS_WSL; then
-        path=$(wslpath -r -s -w $path)
+        path=$(wslpath -w $path)
         (explorer.exe $path &)
     else
         (nautilus $path &)

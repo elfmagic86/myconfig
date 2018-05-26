@@ -1,2 +1,11 @@
+# 설치(win10)
 
+	- installer
+	- 환경변수(PAHT)에 등록
+	: 터미널에서 code 사용위함
+		C:\Program Files\Microsoft VS Code\bin
+
+
+
+# setup
 TODO
