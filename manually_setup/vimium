@@ -1,0 +1,14 @@
+- key
+	# Insert your preferred key mappings here.
+	map <c-d> scrollPageDown
+	map <c-u> scrollPageUp
+	map <a-o> previousTab
+	map <a-i> nextTab
+
+- css for vimiun ui
+div > .vimiumHintMarker {
+/* linkhint boxes */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF785),
+  color-stop(100%,#FFC542));
+border: 1px solid #E3BE23;
+}
