@@ -9,9 +9,9 @@
         # 위의 ppa에서 원하는 자바버전선택
         # sudo apt-cache search oracle-java
 
-    # 2. install java9(include jre, jdk)
+    # 2. install java8(include jre, jdk)
     # 첫인스톨시 라이센스.
-    sudo apt install oracle-java9-installer
+    sudo apt install oracle-java8-installer
 
     # 3. 환경변수(JAVA_HOME, PATH..
     # 위의 인스톨러로 설치시 /etc/profile.d/jdk.sh 도 설치되며 환경변수 설정이 잡힘

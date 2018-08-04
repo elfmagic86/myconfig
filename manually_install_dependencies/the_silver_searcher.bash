@@ -1,5 +1,5 @@
 
-SOURCE_DIR=~/github_sources/the_sliver_searcher
+SOURCE_DIR=$LOCAL_GITHUB_BASE/the_sliver_searcher
 if [ ! -d "$SOURCE_DIR" ]; then
 	# clone
 	git clone https://github.com/ggreer/the_silver_searcher.git $SOURCE_DIR

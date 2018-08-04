@@ -115,4 +115,23 @@ func! s:load_plugins()
 	" editorconfig
 	Plug 'editorconfig/editorconfig-vim'
 
+	" startify
+	Plug 'mhinz/vim-startify'
+
+	" markdown
+	Plug 'godlygeek/tabular'
+	Plug 'plasticboy/vim-markdown'
+
+	" vim orgmode
+	Plug 'jceb/vim-orgmode'
+	" vim orgmode(suggested plugins)
+	Plug 'vim-scripts/utl.vim'
+	Plug 'vim-scripts/repeat.vim'
+	Plug 'vim-scripts/taglist.vim'
+	Plug 'vim-scripts/Tagbar'
+	Plug 'vim-scripts/speeddating.vim'
+	Plug 'vim-scripts/NrrwRgn'
+	Plug 'vim-scripts/calendar.vim'
+	Plug 'vim-scripts/SyntaxRange'
+
 endfunc

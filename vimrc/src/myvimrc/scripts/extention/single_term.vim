@@ -21,18 +21,30 @@ if exists(':tnoremap')
     " transfer to normal mode
     tnoremap <A-z> <C-\><C-n>
 
-    tnoremap <A-t> <C-\><C-n>:call g:MYTerm.toggle_terminal()<CR>
+    " tnoremap <A-t>c <C-\><C-n>:close<CR>
+    " tnoremap <A-t>q <C-\><C-n>:q<CR>
+	tnoremap <A-t> <C-\><C-n>:call g:MYTerm.toggle_terminal_with_file_dir()<CR>
 endif
 
-nnoremap <A-t> :call g:MYTerm.toggle_terminal()<CR>
-inoremap <A-t> <esc>:call g:MYTerm.toggle_terminal()<CR>
+nnoremap <A-t> :call g:MYTerm.toggle_terminal_with_file_dir()<CR>
+" nnoremap <A-t>p :call g:MYTerm.toggle_terminal_with_project_root()<CR>
+" nnoremap <A-t>l :call g:MYTerm.toggle_terminal_with_file_dir()<CR>
 
 " define
 " ===
 let g:MYTerm = {}
 let g:term_buf_nums = {}
 
-func! g:MYTerm.toggle_terminal()
+func! g:MYTerm.toggle_terminal_with_project_root()
+	let term_path = getcwd() " 현재 working dir 기준
+	call g:MYTerm.toggle_terminal(term_path, '')
+endfunc
+func! g:MYTerm.toggle_terminal_with_file_dir()
+	let term_path = expand('%:p:h') " 현재파일의 dir기준
+	call g:MYTerm.toggle_terminal(term_path, '')
+endfunc
+
+func! g:MYTerm.toggle_terminal(term_path, term_cmd)
     " 터미널일경우 window닫음
     if &buftype == 'terminal'
         close
@@ -40,7 +52,7 @@ func! g:MYTerm.toggle_terminal()
     endif
 
     "
-    let term_path = getcwd() " 현재 working dir 기준
+    let term_path = a:term_path
     if len(term_path) == 0 | let term_path = '.' | endif " TODO 기본값 좀 쉽게줄수 없을까
 
     let buf_num = get(g:term_buf_nums, term_path)

@@ -7,11 +7,11 @@
 # https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source
 
 # 1.source
-if [ ! -d ~/github_sources/vim ]; then
-    git clone https://github.com/vim/vim ~/github_sources/vim
+if [ ! -d $LOCAL_GITHUB_BASE/vim ]; then
+    git clone https://github.com/vim/vim $LOCAL_GITHUB_BASE/vim
 fi
 
-cd ~/github_sources/vim
+cd $LOCAL_GITHUB_BASE/vim
 
 # 2. version
 git fetch

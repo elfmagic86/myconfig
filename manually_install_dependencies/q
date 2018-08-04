@@ -9,19 +9,17 @@ if [ ! -d "$SOURCE_DIR" ]; then
 
 	cd $SOURCE_DIR
 
+	# version
+	git fetch
+	git checkout v0.3.0
 
 	# prerequisites
 	# Note: libtool-bin is only required for Ubuntu 16.04/Debian Jessie and newer.
 	sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
 fi
 
-
 # cwd
 cd $SOURCE_DIR
-
-# version
-git fetch
-git checkout v0.3.0
 
 # uninstall
 sudo rm -rf /usr/local/bin/nvim

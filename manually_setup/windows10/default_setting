@@ -61,3 +61,22 @@
 
 	- 설치는 따라하면됨
 	http://sanghaklee.tistory.com/39
+
+# 이슈
+	- ??업데이트후 wsl설치하라는 설명나옴 + cmd도 마찬가지
+		재시작하면 종종됨
+			기억으로는 wsl 서비스?? 재실행시 동작함.
+
+	==>>
+		재설치
+		```powershell(관리자)
+			# 1. 둘다 오류남( 오류: 0x80070002 )
+			lxrun.exe /uninstall /full
+			lxrun.exe /install
+
+			# 2. store로 설치했던 ubuntu도 제거 후 재시작
+
+			# 3. store에서 ubuntu16.04 설치
+		===>>> 일단 이걸로 사용.
+
+		```
