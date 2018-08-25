@@ -46,6 +46,7 @@ task_deploy() {
 
 	# 2. myvimrc
 	rm -rf $DEST_ROOT_PATH/autoload/myvimrc
+	mkdir -p $DEST_ROOT_PATH/autoload
 	ln --symbolic --force --no-dereference $SRC_PATH/myvimrc $DEST_ROOT_PATH/autoload/myvimrc
 
 	# neovim
