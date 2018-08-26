@@ -1,4 +1,4 @@
-# install awesome4.1 
+# install awesome4.1
 # ===
 #
 # NOTE: this script is aggregation of sub task. Not one task script
@@ -12,7 +12,7 @@
 #    • D-Bus support: ✔
 #    • execinfo support: ✔
 #    • xcb-randr version: 1.4
-#    • LGI version: 0.9.1 
+#    • LGI version: 0.9.1
 #
 # ENV: Ubuntu 16.04
 #
@@ -25,17 +25,25 @@
 #     : reference /doc/ubuntu/settings_awesomewm
 #
 # USAGE:
-#   bash awesomewm4_1.bash deps1
-#   bash awesomewm4_1.bash deps2
-#   bash awesomewm4_1.bash deps3
-#   bash awesomewm4_1.bash deps4
-#   bash awesomewm4_1.bash deps5 # doc 관련 설치안함
+#   bash awesomewm4.bash deps1
+#   bash awesomewm4.bash deps2
+#   bash awesomewm4.bash deps3
+#   bash awesomewm4.bash deps4
+#   bash awesomewm4.bash deps5 # doc 관련 설치안함
 #
-#   bash awesomewm4_1.bash install4_1
+#   bash awesomewm4.bash install4_1
+#   bash awesomewm4.bash install4_2
+
+# OPTIONAL:
+#   bash awesomewm4.bash install_default_widget
+
+
+AM_PROJECT_PATH=~/.awesome
+AM_CONFIG_PATH=~/.config/awesome
 
 main() {
     local task=$1
-    
+
     echo task: $task
     $task
 }
@@ -91,7 +99,7 @@ deps3() {
     # https://unix.stackexchange.com/questions/338628/no-package-xcb-xrm-found
     sudo add-apt-repository ppa:aguignard/ppa
     sudo apt-get update
-    sudo apt-get install libxcb-xrm-dev 
+    sudo apt-get install libxcb-xrm-dev
 
     # https://unix.stackexchange.com/questions/338519/how-to-install-libxcb/338540
     local deps=(
@@ -104,11 +112,11 @@ deps3() {
 
     # make에러 나온것을 apt-cache search 로 찾은것들
     deps+=(
-    libxcb-cursor-dev libxcb-cursor0 
+    libxcb-cursor-dev libxcb-cursor0
     libxcb-shape0
     libxcb-shape0-dev
 
-    libxcb-util-dev 
+    libxcb-util-dev
 
     libxcb-keysyms1
     libxcb-keysyms1-dev
@@ -133,12 +141,12 @@ deps4() {
 
     sudo apt-get install \
     libstartup-notification0 \
-    libstartup-notification0-dev 
+    libstartup-notification0-dev
 
     sudo apt-get install \
     libxdg-basedir-dev \
     libxdg-basedir1 \
-    libxdg-basedir1-dbg 
+    libxdg-basedir1-dbg
 
     # dbus
     sudo apt-get install \
@@ -156,17 +164,21 @@ deps5() {
     echo none
 }
 
-# install awesome 4.1
+# install awesome
 # ---
-install4_1() {
+_clone_and_move_rep() {
     # clone
-    rep_path=~/.awesome
-    if [ ! -d $rep_path ]; then
-        git clone https://github.com/awesomeWM/awesome.git $rep_path
+    if [ ! -d $AM_PROJECT_PATH ]; then
+        git clone https://github.com/awesomeWM/awesome.git $AM_PROJECT_PATH
     fi
 
+    cd $AM_PROJECT_PATH
+}
+
+install4_1() {
+	_clone_and_move_rep
+
     # 4.1
-    cd $rep_path
     git checkout tags/v4.1
 
     # build and deploy
@@ -176,15 +188,60 @@ install4_1() {
 
     sudo dpkg -i .build*/awesome*.deb
 
-    # config
-    cd $rep_path
-
     mkdir -p ~/.config/awesome
     cp --backup=number ./awesomerc.lua ~/.config/awesome/rc.lua
 
     sudo cp ./awesome.desktop /usr/share/xsessions/awesome.desktop
 }
 
+install4_2() {
+	_clone_and_move_rep
+
+    # 4.2
+    git checkout tags/v4.2
+
+	make clean
+
+	make
+	make package
+	sudo dpkg -i $(echo ./build*/awesome*.deb)
+}
+
+# optional
+# ---
+
+install_default_widget() {
+	# 0.icons
+    if [ ! -d ~/github_sources/arc-icon-theme ]; then
+        git clone https://github.com/horst3180/arc-icon-theme --depth 1 ~/github_sources/arc-icon-theme
+		cd ~/github_sources/arc-icon-theme
+		./autogen.sh --prefix=/usr
+		sudo make install
+	fi
+
+	# 1. https://github.com/streetturtle/awesome-wm-widgets
+    if [ ! -d $AM_CONFIG_PATH/awesome-wm-widgets ]; then
+        git clone https://github.com/streetturtle/awesome-wm-widgets $AM_CONFIG_PATH/awesome-wm-widgets
+    fi
+	# rc.lua 에 사용할 위젯 import 해줘야함
+
+	# 1.1 배터리
+	sudo apt-get install acpi
+
+	# 1.2 볼륨위젯
+	# - on/off 이미지변경
+	cd $AM_CONFIG_PATH/awesome-wm-widgets/volume-widget
+	cd /usr/share/icons/Arc/status/symbolic &&
+	sudo cp audio-volume-muted-symbolic.svg audio-volume-muted-symbolic_red.svg &&
+	sudo sed -i 's/bebebe/ed4737/g' ./audio-volume-muted-symbolic_red.svg
+	# - usage
+	#	마우스클릭: on/off 토글
+	#	스크롤: 볼륨조정
+
+	# 1.3 cpu_widget
+	# 1.4 ram_widget
+
+}
 
 # run main
 # ---
