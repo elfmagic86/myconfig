@@ -1,0 +1,31 @@
+
+# 이클립스 issue
+
+- 메인븐 update시, 내가 선택한jdk가 아닌 다른 빌드path로 변경됨
+
+  pom.xml의 java version이 없을경우 default값으로 변경되는것
+  https://stackoverflow.com/questions/28509928/java-version-automatically-change-to-java-1-5-after-maven-update
+  > it will simply default to using org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5
+
+# TODO
+
+1. 이클립스 힙사이즈(ini)
+
+2. 이클립스 힙사이즈 상태바에 표시
+
+
+
+- lombok
+
+- js파일 밸리데이션 제외
+>>> windows -> preferences -> validation -> [html, jsp, javascript 등 제외시킴]
+
+- tomcat
+- jetty
+
+- remote system explorer operation
+http://zzznara2.tistory.com/692
+
+- <C-f11>
+https://stackoverflow.com/questions/47190353/possible-to-change-eclipse-hotkey-ctrl-f11-from-run-to-terminate-previous-app
+

@@ -12,13 +12,13 @@ fi
 
 # install
 # https://github.com/jonas/tig/blob/master/INSTALL.adoc
-if [ ! -x "$(command -v tig)" ]; then
+if [ -x "$(command -v tig)" ]; then
 
 	cd $rep_path
 
 	# configure를 빼면 한글이깨짐
-	make configure
 	./configure
+	make configure
 
 	make prefix=/usr/local
 	sudo make install prefix=/usr/local

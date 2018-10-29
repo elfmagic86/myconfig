@@ -12,7 +12,7 @@ if [ ! -d "$SOURCE_DIR" ]; then
 
 	# prerequisites
 	# Note: libtool-bin is only required for Ubuntu 16.04/Debian Jessie and newer.
-	sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
+	sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip gettext
 fi
 
 
@@ -39,18 +39,12 @@ make clean
 make distclean
 
 make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" CMAKE_BUILD_TYPE=Release
-make install
+sudo make install
 
 
 echo TODO
 echo '
-# PATH에 $HOME/neovim/bin/nvim 등록시켜줘야함
 
-
-
-# TODO 아래명령은 install이 실패함.
-# make CMAKE_BUILD_TYPE=Release
-# sudo make install
 
 #
 # optional

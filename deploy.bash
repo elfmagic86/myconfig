@@ -27,16 +27,27 @@ main() {
 # deploy
 # ---
 deploy_dotfiles() {
+	# NOTE: 1 depth
 	for dotfile in $(find $ROOT_PATH/dotfiles -maxdepth 1 -mindepth 1); do
 		local name=`basename $dotfile`
+		local is_ignore=false
 
 		case "$name" in
-			.gitignore) ;;
+			.m2)
+				if ! $IS_WSL; then is_ignore=true; fi
+				;;
+			.gitignore)
+				is_ignore=true
+				;;
 			*)
-				rm -rf $HOME/$name
-				ln --symbolic --force --no-dereference $dotfile $HOME/$name
+				is_ignore=false
 				;;
 		esac
+
+		if [ ! $is_ignore = true ]; then
+			rm -rf $HOME/$name
+			ln --symbolic --force --no-dereference $dotfile $HOME/$name
+		fi
 	done
 }
 

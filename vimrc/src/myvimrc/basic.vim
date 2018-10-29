@@ -70,9 +70,7 @@ func! s:setup_basic()
 	set undolevels=1000 " 1000 undos
 
 	" mouse
-	if has('mouse')
-		set mouse=a
-	endif
+	set mouse=
 
 	" highlighting
 	set t_Co=256  "기본설정이 8임.
@@ -90,4 +88,8 @@ func! s:setup_basic()
 	" TODO dos2unix
 	autocmd InsertEnter,InsertLeave *.bash setlocal ff=unix
 	autocmd InsertEnter,InsertLeave *.sh setlocal ff=unix
+
+	" fold
+	" set foldlevel=99
+	set nofoldenable
 endfunc

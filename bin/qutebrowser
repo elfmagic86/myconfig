@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#
+($LOCAL_GITHUB_BASE/qutebrowser/.venv/bin/python3 -m qutebrowser "$@" "--enable-webengine-inspector" &)
