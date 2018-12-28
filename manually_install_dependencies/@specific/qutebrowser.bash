@@ -1,4 +1,9 @@
 
+
+# - ubuntu16 기준
+#	윈도우는 인스톨러 이용해서 설치하는것이 간편함
+#   wsl은 xming...
+
 SOURCE_DIR=$LOCAL_GITHUB_BASE/qutebrowser
 if [ ! -d "$SOURCE_DIR" ]; then
 	# clone
@@ -11,8 +16,11 @@ sudo apt-get install tox
 # https://qutebrowser.org/doc/install.html#tox6
 
 # 2. local dependencies(not systemwide)
+echo 'NOTE: required >= python3.5'
+
 cd $SOURCE_DIR
 tox -e mkvenv-pypi-old
+# tox -e mkvenv-pypi  # 위가 안될경우 임시방편, 로그 없이 대기하니 주의
 
 # 3. doc
 sudo apt install --no-install-recommends asciidoc source-highlight

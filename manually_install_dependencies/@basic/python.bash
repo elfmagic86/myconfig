@@ -22,3 +22,10 @@ sudo -H pip2 install neovim
 sudo -H pip3 install neovim
 
 
+# https://askubuntu.com/questions/865554/how-do-i-install-python-3-6-using-apt-get
+# 필요시 설치
+# sudo add-apt-repository ppa:deadsnakes/ppa
+# sudo apt-get update
+# sudo apt-get install python3.6
+
+
