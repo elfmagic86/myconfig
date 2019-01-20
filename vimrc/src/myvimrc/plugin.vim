@@ -10,7 +10,9 @@ func! myvimrc#plugin#setup()
 	call s:scriptLoader.loadAll(l:target)
 endfunc
 
-
+func! myvimrc#plugin#reload()
+	call s:load_plugins()
+endfunc
 
 
 
@@ -124,16 +126,9 @@ func! s:load_plugins()
 	Plug 'godlygeek/tabular'
 	Plug 'plasticboy/vim-markdown'
 
-	" vim orgmode
-	Plug 'jceb/vim-orgmode'
-	" vim orgmode(suggested plugins)
-	Plug 'vim-scripts/utl.vim'
-	Plug 'vim-scripts/repeat.vim'
-	Plug 'vim-scripts/taglist.vim'
-	Plug 'vim-scripts/Tagbar'
-	Plug 'vim-scripts/speeddating.vim'
-	Plug 'vim-scripts/NrrwRgn'
-	Plug 'vim-scripts/calendar.vim'
-	Plug 'vim-scripts/SyntaxRange'
+	" Add maktaba and bazel to the runtimepath.
+	" (The latter must be installed before it can be used.)
+	Plug 'google/vim-maktaba'
+	Plug 'bazelbuild/vim-bazel'
 
 endfunc

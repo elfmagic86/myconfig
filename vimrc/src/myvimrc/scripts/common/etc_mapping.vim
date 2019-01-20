@@ -13,8 +13,8 @@ nnoremap <A-a> ggVG
 " 버퍼,jumps 이동
 " ---
 " <C-i/o>의 :jumps 이동과 유사하게
-nnoremap <A-o> :bprevious<CR>
-nnoremap <A-i> :bnext<CR>
+nnoremap <A-i> :bprevious<CR>
+nnoremap <A-o> :bnext<CR>
 
 
 " window 이동
