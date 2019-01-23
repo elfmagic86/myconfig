@@ -31,7 +31,8 @@ open_browser() {
         if $IS_WSL; then
             (cmd.exe /c start "chrome" "$url" &)
         else
-            (opera "$url" &)
+            (qutebrowser "$url" &)
+            # (qutebrowser --enable-webengine-inspector "$url" &)
         fi
     fi
 }

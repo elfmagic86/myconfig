@@ -8,8 +8,14 @@ func! s:init_vimrc_process()
 	call myvimrc#plugin#setup()
 endfunc
 
-" refresh
-command! -nargs=0 RefreshVimrc call <SID>init_vimrc_process()
+func! s:reload_plugin()
+	call myvimrc#plugin#reload()
+endfunc
+
+" TODO refresh ( :so % )
+
+" reload plugin
+command! -nargs=0 ReloadPlugin call <SID>reload_plugin()
 
 
 " do init
