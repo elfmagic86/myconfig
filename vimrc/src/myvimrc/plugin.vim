@@ -68,8 +68,7 @@ func! s:load_plugins()
 	  endif
 	endfunction
 
-	" Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-	Plug 'zxqfl/tabnine-vim', { 'do': function('BuildYCM') }
+	Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
 	" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
@@ -96,6 +95,9 @@ func! s:load_plugins()
 	Plug 'pangloss/vim-javascript'
 	" vue
 	Plug 'posva/vim-vue'
+
+	" golang
+	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 	" ---
 	" ctags? Ggrep?

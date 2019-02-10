@@ -15,6 +15,9 @@ endif
 
 " define character(indent, tabkey)
 " ---
+
+" WARN: editorconfig
+
 " set expandtab " spacekey
 set noexpandtab " tab
 
