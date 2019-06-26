@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Autostart script for xsession
+Exec=/bin/bash -c '~/.xsession'
+Type=Application
+
+
+# TODO  
+
+# autostart
+# https://wiki.archlinux.org/index.php/Autostarting#On_desktop_environment_startup
+# https://specifications.freedesktop.org/autostart-spec/autostart-spec-latest.html
+
+# scripts
+# https://askubuntu.com/questions/156765/adding-a-file-to-the-list-of-startup-applications

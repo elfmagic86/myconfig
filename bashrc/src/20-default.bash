@@ -34,8 +34,9 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+# https://stackoverflow.com/questions/9457233/unlimited-bash-history/19533853
+HISTSIZE=-1
+HISTFILESIZE=-1
 
 
 # 기타 확장

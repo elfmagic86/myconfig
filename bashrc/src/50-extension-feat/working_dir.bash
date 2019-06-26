@@ -6,9 +6,9 @@
 cwd_move_with_bookmark() {
   # 수동으로북마크..
   local base_path dirs
-  dirs="$dirs"$'\n'$(__find_dir $KANG_SRC_ROOT/Project_Biz "1");
-  dirs="$dirs"$'\n'$(__find_dir $KANG_SRC_ROOT/Project_Mine "1");
-  dirs="$dirs"$'\n'$(__find_dir $KANG_SRC_ROOT "1");
+  dirs="$dirs"$'\n'$(__find_dir $GK_HOME/Project_Biz "1");
+  dirs="$dirs"$'\n'$(__find_dir $GK_HOME/Project_Mine "1");
+  dirs="$dirs"$'\n'$(__find_dir $GK_HOME "1");
 
   # 북마크들로 fzf 선택한곳 기준으로 동작
   base_path=$(echo "$dirs" | fzf)

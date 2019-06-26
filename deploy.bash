@@ -34,18 +34,20 @@ deploy_dotfiles() {
 
 		case "$name" in
 			.m2)
-				if ! $IS_WSL; then is_ignore=true; fi
+				if ! $GK_IS_WSL; then is_ignore=true; fi
 				;;
 			.gitignore)
 				is_ignore=true
 				;;
+			.gnomerc|.profile|.xsession)
+				chmod +x $dotfile 2>&1 > /dev/null
+				;;			
 			*)
-				is_ignore=false
 				;;
 		esac
 
 		if [ ! $is_ignore = true ]; then
-			rm -rf $HOME/$name
+			rm $HOME/$name
 			ln --symbolic --force --no-dereference $dotfile $HOME/$name
 		fi
 	done
@@ -57,6 +59,16 @@ deploy_dotfiles_direct_location() {
     # awesoem
     mkdir -p $HOME/.config/awesome
     ln --symbolic --force --no-dereference  $src_path/awesome/rc.lua $HOME/.config/awesome/rc.lua
+
+	# xdg autostart
+    mkdir -p $HOME/.config/autostart
+	ln --symbolic --force --no-dereference  $src_path/gnome-session-startup.desktop $HOME/.config/autostart/
+
+	# lightdm
+	echo "sudo.. for lightdm conf"
+	sudo rm -f /etc/lightdm/lightdm.conf
+    sudo cp $src_path/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
+
 }
 
 deploy_bin() {
@@ -68,7 +80,7 @@ deploy_bin() {
 	done
 
 	# link
-	rm -rf $HOME/bin
+	rm -r $HOME/bin
 	ln --symbolic --force --no-dereference $ROOT_PATH/bin $HOME/bin
 }
 

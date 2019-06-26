@@ -10,7 +10,7 @@ PATH="$PATH:$HOME/bin"
 
 
 # depot_tool(v8, chromium 등.)
-PATH="$PATH:$KANG_SRC_ROOT/Project_Ref/depot_tools"
+PATH="$PATH:$GK_HOME/Project_Ref/depot_tools"
 
 # scala
 PATH="$PATH:/opt/scala-2.12.0/bin"

@@ -1,5 +1,5 @@
 
-if $IS_WSL; then
+if $GK_IS_WSL; then
     # export DISPLAY=:0
     # win32yank.exe 다운 및 path등록 필요
     wpaste() {

@@ -1,2 +1,4 @@
-# echo loginshell
-[ -r ~/.bashrc ] && . ~/.bashrc
+
+if [ -x ~/.bashrc ]; then
+    . ~/.bashrc
+fi

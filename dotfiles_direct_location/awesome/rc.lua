@@ -606,8 +606,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 
--- TODO 적절한 위치
--- wifi
--- https://askubuntu.com/questions/150658/awesome-wm-does-not-search-for-wifi-networks
-awful.util.spawn_with_shell("pgrep -u $USER -x nm-applet > /dev/null || (nm-applet &)")
-
+-- startup autorun 위해 todo 4.3 once 사용
+awful.spawn.with_shell("~/.xsession")

@@ -1,3 +1,5 @@
+! [키값 수정사항]
+! 1. capslock to esc: todo 중복호출시 remove때문에 에러남
 ! caps lock to escape
 remove Lock = Caps_Lock
 ! keysym Escape = Caps_Lock

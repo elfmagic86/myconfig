@@ -8,7 +8,7 @@
 open_filemanager() {
     local path=${1:-.}
 
-    if $IS_WSL; then
+    if $GK_IS_WSL; then
         path=$(wslpath -w $path)
         (explorer.exe $path &)
     else
@@ -19,7 +19,7 @@ open_filemanager() {
 open_terminal() {
     local path=${1:-.}
 
-    if $IS_WSL; then
+    if $GK_IS_WSL; then
         (cd $path && cmd.exe /c start "bash" &)
     else
         (gnome-terminal --working-directory=$path &)
@@ -28,7 +28,7 @@ open_terminal() {
 open_browser() {
     local url=$1
     if [ -n "$url" ]; then
-        if $IS_WSL; then
+        if $GK_IS_WSL; then
             (cmd.exe /c start "chrome" "$url" &)
         else
             (qutebrowser "$url" &)

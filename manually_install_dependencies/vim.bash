@@ -15,7 +15,7 @@ cd $LOCAL_GITHUB_BASE/vim
 
 # 2. version
 git fetch
-git checkout v8.1.0877
+git checkout v8.1.1551
 
 # 2. Remove vim if you have it already.
 sudo apt-get remove vim vim-runtime gvim

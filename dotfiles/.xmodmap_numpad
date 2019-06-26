@@ -1,0 +1,43 @@
+! [키값 수정사항]
+
+! 2. lenovo y540 노트북 키보드의 숫자패드 키 변경.
+keycode 81 = Home
+keycode 106 = Prior
+keycode 84 = Delete
+keycode 85 = End
+keycode 63 = Next
+keycode 89 = Home 
+keycode 82 = Prior 
+keycode 90 = Delete 
+keycode 91 = End 
+keycode 86 = Next 
+
+! ----- 사용가능한 심볼값
+! https://askubuntu.com/questions/234416/how-to-remap-the-context-menu-to-another-key-in-linux
+! cat /usr/share/X11/xkb/symbols/pc
+! key <HOME> {        [  Home                 ]       };
+! key <PGUP> {        [  Prior                ]       };
+! key <DELE> {        [  Delete               ]       };
+! key  <END> {        [  End                  ]       };
+! key <PGDN> {        [  Next                 ]       };
+
+! key   <UP> {        [  Up                   ]       };
+! key <LEFT> {        [  Left                 ]       };
+! key <DOWN> {        [  Down                 ]       };
+! key <RGHT> {        [  Right                ]       }
+
+
+! -------- 노트북 키코드 확인
+! xev | grep keycode
+! state 0x10, keycode 81 (keysym 0xffb9, KP_9), same_screen YES,
+! state 0x10, keycode 106 (keysym 0xffaf, KP_Divide), same_screen YES,
+! state 0x10, keycode 84 (keysym 0xffb5, KP_5), same_screen YES,
+! state 0x10, keycode 85 (keysym 0xffb6, KP_6), same_screen YES,
+! state 0x10, keycode 63 (keysym 0xffaa, KP_Multiply), same_screen YES,
+
+!    state 0x10, keycode 89 (keysym 0xffb3, KP_3), same_screen YES,
+!    state 0x10, keycode 82 (keysym 0xffad, KP_Subtract), same_screen YES,
+!    state 0x10, keycode 90 (keysym 0xffb0, KP_0), same_screen YES,
+!    state 0x10, keycode 91 (keysym 0xffae, KP_Decimal), same_screen YES,
+!    XKeysymToKeycode returns keycode: 129
+!    state 0x10, keycode 86 (keysym 0xffab, KP_Add), same_screen YES,

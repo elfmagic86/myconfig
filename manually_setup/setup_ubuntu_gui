@@ -1,0 +1,11 @@
+# ubuntu18.04 기본 설정
+# ===
+
+- network
+
+- nvidia 드라이버
+
+- ibus-setup
+    - 한글
+    - emoji setup C+S+e 제거
+

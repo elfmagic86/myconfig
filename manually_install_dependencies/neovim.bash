@@ -59,6 +59,6 @@ gem update neovim
 npm install -g neovim
 
 # wsl clipboard, win32yank.exe를 설치해야함
-if $IS_WSL; then
+if $GK_IS_WSL; then
 	sudo ln -s $(which win32yank.exe) /usr/bin/win32yank
 fi

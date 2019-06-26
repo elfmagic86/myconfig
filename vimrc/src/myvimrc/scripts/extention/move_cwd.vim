@@ -39,9 +39,9 @@ func! s:move_cwd_with_bookmark()
 
 	" TODO 하드코딩한 bookmark 기능. vim과 bash에서 공통적으로 사용할수있게만들기
 	" config파일로 입력할수있게만들기.
-	let b1 = '$(find $KANG_SRC_ROOT/Project_Mine -maxdepth 1 -type d)'
-	let b2 = '\n$(find $KANG_SRC_ROOT/Project_Biz -maxdepth 1 -type d)'
-	let b3 = '\n$(find $KANG_SRC_ROOT -maxdepth 1 -type d)'
+	let b1 = '$(find $GK_HOME/Project_Mine -maxdepth 2 -type d)'
+	let b2 = '\n$(find $GK_HOME/Project_Biz -maxdepth 1 -type d)'
+	let b3 = '\n$(find $GK_HOME -maxdepth 1 -type d)'
 
 	let cmd = 'echo "'.b1.b2.b3.'"'
 	let cmd .= ' | '
