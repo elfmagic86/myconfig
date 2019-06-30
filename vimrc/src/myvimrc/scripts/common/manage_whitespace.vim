@@ -6,7 +6,7 @@
 " ---
 set list "listchars를 enable하기위해 필요.
 
-if $GK_IS_WSL == "true"
+if $GCE_IS_WSL == "true"
 	set listchars=tab:>.,trail:.,eol:↲,extends:»,precedes:«,nbsp:%
 else
     set listchars=tab:→\ ,trail:·,eol:¬,extends:…,precedes:…

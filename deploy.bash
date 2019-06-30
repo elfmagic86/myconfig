@@ -34,7 +34,7 @@ deploy_dotfiles() {
 
 		case "$name" in
 			.m2)
-				if ! $GK_IS_WSL; then is_ignore=true; fi
+				if ! $GCE_IS_WSL; then is_ignore=true; fi
 				;;
 			.gitignore)
 				is_ignore=true

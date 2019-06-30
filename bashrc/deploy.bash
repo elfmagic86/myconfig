@@ -10,10 +10,10 @@ fi
 
 # env
 # ---
-ROOT_PATH=$(cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
+SCRIPT_ROOT=$(cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
-SRC_PATH=$ROOT_PATH/src
-DIST_PATH=$ROOT_PATH/dist
+SRC_ROOT=$SCRIPT_ROOT/src
+DIST_ROOT=$SCRIPT_ROOT/dist
 
 
 # main
@@ -22,45 +22,34 @@ main() {
 	local mode=${1:-prod}
 
 	echo bash-deploy: mode: $mode
-
 	if [ "$mode" = 'dev' ]; then
 		task_dev_bundle
-		task_force_deploy
-	elif [ "$mode" = 'prod' ]; then
-		task_bundle
-		task_force_deploy
+		task_deploy
+	else
+		task_prod_bundle
+		task_deploy
 	fi
 }
 
-# create single vimrc by soft link
 task_dev_bundle() {
-	# dist폴더 정리 및 빈 vimrc만듬
-	rm -rf $DIST_PATH 2> /dev/null
-	mkdir -p $DIST_PATH
-	touch $DIST_PATH/.bashrc
+	# bashrc.d에 단순복사
+	rm -rf $DIST_ROOT 2> /dev/null
+	
+	mkdir -p $DIST_ROOT
+	cp -r $SRC_ROOT $DIST_ROOT/.bashrc.d
 
-	# 순차적으로 source 추가
-	local files content
-	files=$(find $SRC_PATH -name '*.bash' | sort)
-	for file in $files; do
-		if [ -f "$file" ]; then
-			echo "source $file" >> $DIST_PATH/.bashrc
-		fi
-	done
-
-	# reload는 rr alias로 bashrc에 포함되어있음
+	# create .basrc(config, bashrc-skeleton)
+	cat $SCRIPT_ROOT/config-dev.bash >> $DIST_ROOT/.bashrc
+	echo -e "\n" >> $DIST_ROOT/.bashrc
+	cat $SCRIPT_ROOT/bashrc-skeleton.bash >> $DIST_ROOT/.bashrc 
 }
 
-# create single vimrc
-task_bundle() {
-	# dist폴더 정리 및 빈 vimrc만듬
-	rm -rf $DIST_PATH 2> /dev/null
-	mkdir -p $DIST_PATH
-	touch $DIST_PATH/.bashrc
-
-	# 순차적으로 내용 추가.
+util_merge_file_in_dir() {
+	local target_dir="$1"
+	local merged_file="$2"
+	# src
 	local files content
-	files=$(find $SRC_PATH -name '*.bash' | sort)
+	files=$(find $target_dir -name '*.bash' | sort)
 	for file in $files; do
 		if [ -f "$file" ]; then
 			# echo $file
@@ -70,25 +59,43 @@ task_bundle() {
 			content+='\n'
 			content+='# ==='
 			content+='\n'
-			echo -e "$content" >> $DIST_PATH/.bashrc
-			cat $file >> $DIST_PATH/.bashrc
+			echo -e "$content" >> $merged_file
+			cat $file >> $merged_file
 		fi
 	done
 }
+task_prod_bundle() {
+	# dist폴더 정리 및 빈 vimrc만듬
+	rm -rf $DIST_ROOT 2> /dev/null
+	mkdir -p $DIST_ROOT/.bashrc.d
 
-# NOTE 기존것 지우고 현재버전을 복사한다.
-task_force_deploy() {
-	local file=$DIST_PATH/.bashrc
-	if [ -f "$file" ]; then
-	file_name=`basename $file`
+	# src
+	local target to_path
+	for target in $SRC_ROOT/*; do
+		to_path=$DIST_ROOT/.bashrc.d/$(basename $target)
+		if [ -d "$target" ]; then
+			mkdir -p $to_path
+			util_merge_file_in_dir "$target" "$to_path/merged.bash"
+		else
+			cp $target $to_path
+		fi
+	done
 
-	rm -rf $HOME/$file_name
-	# cp -r -v $file $HOME/$file_name
-	ln --symbolic --force --no-dereference $file $HOME/$file_name
-  fi
+	# create .basrc(config, bashrc-skeleton)
+	cat $SCRIPT_ROOT/config.bash >> $DIST_ROOT/.bashrc
+	echo -e "\n" >> $DIST_ROOT/.bashrc
+	cat $SCRIPT_ROOT/bashrc-skeleton.bash >> $DIST_ROOT/.bashrc 
 }
 
-# TODO task_install_deps() {
+# 삭제 후 링크
+task_deploy() {
+	rm -rf $HOME/bashrc.d
+	rm -rf $HOME/.bashrc
+
+	ln --symbolic --force --no-dereference $DIST_ROOT/.bashrc.d $HOME/.bashrc.d
+	ln --symbolic --force --no-dereference $DIST_ROOT/.bashrc $HOME/.bashrc
+}
+
 
 # runner
 # ---

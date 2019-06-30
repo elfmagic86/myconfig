@@ -1,0 +1,2 @@
+# DEBUG(10) > INFO(20) > ERROR(30)
+export GCNF_LOG_LEVEL=10
