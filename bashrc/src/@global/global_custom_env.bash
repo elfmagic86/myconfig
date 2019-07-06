@@ -17,5 +17,5 @@ if $GCE_IS_WSL; then
 fi
 
 # global mine
-export GCE_MINE="${GCE_MY_HOME}/mine"
+export GCE_MY_PROJ="${GCE_MY_HOME}/Project_Mine"
 export GCE_GITHUB_SRC="${GCE_MY_HOME}/github_src"

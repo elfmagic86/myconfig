@@ -15,7 +15,7 @@ cd "$GCE_GITHUB_SRC"/vim
 
 # 2. version
 git fetch
-git checkout v8.1.1551
+git checkout v8.1.1640
 
 # 2. Remove vim if you have it already.
 sudo apt-get remove vim vim-runtime gvim
@@ -29,7 +29,7 @@ sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
 # 3.1 libruby
 # ruby-dev이 rvm으로 설치되었을시..
 # ruby2.4를 사용중이라 아래 설치함
-sudo apt-add-repository ppa:brightbox/ruby-ng
+sudo apt-add-repository -y ppa:brightbox/ruby-ng
 sudo apt-get update
 sudo apt-get install ruby2.4-dev
 
@@ -55,6 +55,7 @@ make distclean
             --enable-gui=gtk2 \
             --enable-cscope \
             --prefix=/usr/local
-make VIMRUNTIMEDIR=/usr/local/share/vim/vim80
+# NOTE: 버전에 맞는 정확한 경로사용해야함
+make VIMRUNTIMEDIR=/usr/local/share/vim/vim81
 # 5. deploy
 sudo make install

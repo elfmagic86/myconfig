@@ -1,0 +1,5 @@
+# issue
+
+- `:FzfContent content` 에러
+~/.local/share/fzf-history/ag  소유자가 root
+

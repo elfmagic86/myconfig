@@ -41,8 +41,9 @@ sudo apt-get update
 # add-apt-repository
 sudo apt-get install -y "${programs[@]}"
 
-
-
-
+# TODO
+echo TODO 
+	# lightdm
+	# numlockx
 # TODO path..
 # bash $(pwd)/basic/curl.bash

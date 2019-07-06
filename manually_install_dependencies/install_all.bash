@@ -19,7 +19,7 @@ install_in_dir() {
         for script in $(find $dir -name '*.bash'); do
             echo "============= install: $script ==============="
             bash "$script"
-        done     
+        done
     else
         echo no dir: $dir
     fi
@@ -27,7 +27,6 @@ install_in_dir() {
 
 # hook
 sudo() {
-        echo 11111111100000000000000000000000
     local param1="$1"
     local param2="$2"
     if [ "$param1" = "apt-get" ]; then
@@ -46,6 +45,9 @@ export -f sudo
 
 # todo
 echo "우분투 미러 호스트 변경하기: https://www.manualfactory.net/10525"
+echo log기록
+echo TODO apt-get install 등 sub task로 변경
+
 /usr/bin/sudo echo "sudo미리처리"
 
 install_in_dir $SCRIPT_ROOT/default_program
