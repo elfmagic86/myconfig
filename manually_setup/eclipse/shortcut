@@ -16,8 +16,8 @@ NOTE: 우클릭으로 나오는 메뉴, 메뉴바의 메뉴를 참고할것. 단
 	C-f7: 윈도우이동
 	C-3: quick access, 윈도우? 메뉴간 이동
 
-	C-0(binding): Show View(Project Explorer), show In아님
-	C-A-0(binding): Show In(Package Explorer)
+	C-A-0(CUSTOM): Show View(Project Explorer), <-> 선택
+	C-0(CUSTOM): Show View(Package Explorer), <->해제
 
 
 

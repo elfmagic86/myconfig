@@ -29,12 +29,16 @@
 	https://stackoverflow.com/questions/4399102/configure-eclipse-word-boundaries-so-next-word-key-skips-whole-identifier
 	> java Editor와 일반 Editor의 `Smart caret positioning at line start and end` 해제
 
-# validation 등 불필요한것 제거
-: http://egloos.zum.com/jaures/v/2290270
+	- heap status view
+	preference -> general -> Show heap status
 
+	- validation 등 불필요한것 제거
+	windows -> preferences -> validation -> [html, jsp, javascript 등 제외시킴]
+
+   - java tap to space
+   java > formatter > indent.. 설정변경
 
 # plugins
-	- buildship
 
 
 # 추가설정

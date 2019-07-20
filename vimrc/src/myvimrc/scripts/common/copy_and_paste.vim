@@ -1,9 +1,12 @@
 "copy & paset using clipboard
 "---
 
-" - wsl에서 clipboard로 win32yank.exe사용하기 TODO neovim은 되고 vim은 안됨
-" win32yank.exe를 설치하고 wsl에 링크해준다.
-" $> sudo ln -s $(which win32yank.exe) /usr/bin/win32yank
+" system clipboard와 동기화(neovim)
+" :h clipboard
+" - os에따라 필요한 프로그램 설치해줘야함
+" win: win32yank.exe
+" linux: xclip
+
 
 " delete
 vnoremap <Leader>d "+dd

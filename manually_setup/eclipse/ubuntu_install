@@ -1,0 +1,13 @@
+
+
+
+# sts
+
+- download tar
+https://spring.io/tools3/sts/all
+압축풀고 사용.
+
+- jdk source attach위해..
+# 아래처럼 source, doc전부 설치해줘야함.
+sudo apt install openjdk-8-jdk openjdk-8-doc openjdk-8-source
+

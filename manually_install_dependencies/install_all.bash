@@ -54,3 +54,5 @@ install_in_dir $SCRIPT_ROOT/default_program
 install_in_dir $SCRIPT_ROOT/base_env_program
 install_in_dir $SCRIPT_ROOT/base_util_program
 install_in_dir $SCRIPT_ROOT/opt_program
+
+echo "@specific 내의 docker등은 수동설치"

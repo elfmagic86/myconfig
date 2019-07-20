@@ -11,14 +11,7 @@
 
 1. 이클립스 힙사이즈(ini)
 
-2. 이클립스 힙사이즈 상태바에 표시
-
-
-
 - lombok
-
-- js파일 밸리데이션 제외
->>> windows -> preferences -> validation -> [html, jsp, javascript 등 제외시킴]
 
 - tomcat
 - jetty
