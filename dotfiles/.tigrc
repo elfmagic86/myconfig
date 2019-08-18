@@ -1,0 +1,8 @@
+# TODO
+# set   variable = value
+# bind  keymap key action
+# color area fgcolor bgcolor [attributes]
+# source path
+
+set line-graphics = default
+set tab-size = 16

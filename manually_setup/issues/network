@@ -1,0 +1,3 @@
+
+TODO awesomewm에서 network 상태보기 + 설정
+- 현재.. lightdm의 진입점에서 네트워크 설정, 문제있음 ubuntu가서 설정하고 돌아옴.

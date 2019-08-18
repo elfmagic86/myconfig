@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # todo 경로
-(/kang/program/sts-bundle/sts-3.9.9.RELEASE/STS &) > /dev/null 2>&1
+(/kang/program/sts-bundle/sts-3.9.9.RELEASE/STS "$@" &) > /dev/null 2>&1

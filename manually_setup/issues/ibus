@@ -1,0 +1,10 @@
+
+- TODO 가끔 엔진 설정이 풀릴경우가 있음.
+```
+# 찾아서
+ibus list-engine | grep hangul
+ibus engine hangul
+~/.xsession
+```
+
+

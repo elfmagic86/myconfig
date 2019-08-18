@@ -1,0 +1,6 @@
+- TODO local db 서버
+https://gongzza.github.io/docker/db-sample/
+	- docker에서 필요할때 실행하거나, starttime 실행하도록 구성
+	- dbeaver세팅
+
+-

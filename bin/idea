@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# todo 경로
+(/kang/program/idea-IC-192.5728.98/bin/idea.sh "$@" &) > /dev/null 2>&1
+
+

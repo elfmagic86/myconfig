@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # NOTE: **force** remove old file and link newfile
-
+#
 # env
 # ---
 ROOT_PATH=$(cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
@@ -41,7 +41,7 @@ deploy_dotfiles() {
 				;;
 			.gnomerc|.profile|.xsession)
 				chmod +x $dotfile 2>&1 > /dev/null
-				;;			
+				;;
 			*)
 				;;
 		esac
@@ -65,9 +65,12 @@ deploy_dotfiles_direct_location() {
 	ln --symbolic --force --no-dereference  $src_path/gnome-session-startup.desktop $HOME/.config/autostart/
 
 	# lightdm
-	echo "sudo.. for lightdm conf"
-	sudo rm -f /etc/lightdm/lightdm.conf
-    sudo cp $src_path/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
+	if [ -d /etc/lightdm ]; then
+		echo "sudo.. for lightdm conf"
+
+		sudo rm -f /etc/lightdm/lightdm.conf
+		sudo cp $src_path/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
+	fi
 
 }
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO awesome -> ubuntu -> awesome 전환시 1. ibus engine 2. ~/.xsession 재실행 필요함
+
 # https://wiki.debian.org/Xsession
 # run by xclient
 # - awesomewm4.2: /home/kang/.config/awesome/rc.lua
@@ -16,10 +18,10 @@ if ! grep -q Microsoft /proc/version; then # !is_wsl
         # - touchpad tap to click(todo https://wiki.archlinux.org/index.php/Touchpad_Synaptics)
         # xinput list             xinput list-props <device-name>
         xinput set-prop "MSFT0001:01 06CB:CD5F Touchpad" "libinput Tapping Enabled" 1
-        
+
         # - numlock on
         numlockx on
-        
+
         # - numpad key mapping
         /usr/bin/xmodmap $HOME/.xmodmap_numpad
     fi
@@ -32,5 +34,5 @@ fi
 # todo startup 프로그램 제어
 # todo xmodmaap -> setxkbmap(특정 키보드별 설정위해)
 
-# 상태확인 xset -q 
+# 상태확인 xset -q
 

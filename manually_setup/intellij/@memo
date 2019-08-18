@@ -1,0 +1,54 @@
+
+- install
+	- CE
+	- java web개발용
+
+
+- settings
+	- keymap: eclipse
+	- show whitespaces
+	- safe write: disabled
+
+	- Build, Execution, Deployment
+		- maven, gradle 설정만 확인
+		- HotSwap: 사용안함..
+
+	- project view
+		- Autoscroll from Source
+
+- plugins
+	- smarttomcat
+
+- shortcut(eclipse keymap)
+
+	- default
+		- code assist: A-enter
+
+		- pannel
+			- switcher: C-t
+			- pannel toggle: A-{1~9}
+
+		- windows
+			- close: C-f4 / C-S-f4
+			- split: C-S-A split
+
+		- search
+			- all: S-S
+			- actions: C-S-a
+			- file search all: C-S-r
+			- recent
+				- location: C-S-e
+				- file recent: C-e
+			- find in path: C-h
+
+		- multiple cursor
+			- 단어선택: A-y / A-C-Y
+			- todo 멀티커서 생성??
+
+		- run/debug
+			- debug 실행했던것: A-S-d
+
+
+
+
+
