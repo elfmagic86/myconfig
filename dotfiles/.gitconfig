@@ -5,3 +5,5 @@
 [user]
 	email = elfmagic86@gmail.com
 	name = testuser0
+[http]
+	cookiefile = /home/kang/.gitcookies

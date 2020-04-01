@@ -1,3 +1,4 @@
+===
 
 - install
 	- CE
@@ -7,7 +8,7 @@
 - settings
 	- keymap: eclipse
 	- show whitespaces
-	- safe write: disabled
+	- safe write: enable << todo
 
 	- Build, Execution, Deployment
 		- maven, gradle 설정만 확인
@@ -16,21 +17,41 @@
 	- project view
 		- Autoscroll from Source
 
+	- animate window: false
+	- spelling 설정 끔
+
 - plugins
 	- smarttomcat
+		1. Configuration > Deployment: {path}/webapp 을 설정해야함
+		2. 실행시 Null 에러나오면 1의 Deployment재설정 후  Context Path 재설정 필요
+		todo 이유?
+	- codeglance
+	code minimap
+
+
+===
+
 
 - shortcut(eclipse keymap)
 
 	- default
+		- nav
+			- source기준 navi: A-f1
+
 		- code assist: A-enter
 
 		- pannel
-			- switcher: C-t
 			- pannel toggle: A-{1~9}
 
 		- windows
-			- close: C-f4 / C-S-f4
+			- close: C-f4 / C-S-f4 << custom todo
 			- split: C-S-A split
+			  switcher: C-TAB
+			- focus to source: ESC or F12
+			- full source screen..?: S-F12
+
+			- bookmark source: C-S-{1~9}
+			  goto marking: C-{1~9}
 
 		- search
 			- all: S-S
@@ -40,6 +61,8 @@
 				- location: C-S-e
 				- file recent: C-e
 			- find in path: C-h
+			- impl: C-t
+			- find useage: C-g
 
 		- multiple cursor
 			- 단어선택: A-y / A-C-Y
@@ -48,7 +71,36 @@
 		- run/debug
 			- debug 실행했던것: A-S-d
 
+		- error message view TODO
+			- previous hightlighted error: S-f1
+			  라인에 커서 올려놓으면 좌하단에 메시지나옴
+
+			- C-f1
+			  퀵픽스...
+
+	- custom
+		- Clone Caret Above: C-A-Up
+		- Clone Caret Below: C-A-Down
+		- Duplicate Entire Lines: A-S-Down
 
 
+===
+
+- etc
+	왼쪽하단모소리의 ㅁ표시버튼, 탭형태로 <A-1~9>에 해당하는 기능 toggle
+
+
+
+- 유용
+	- `VCS | Git: Annotate`: git blame 비슷
+
+===
+
+TODO
+- maven
+	- maven profile 사용시
+		maven컴파일위해 ui의 sync 표시한번씩 눌러볼것
+
+	- multiple profile ???
 
 

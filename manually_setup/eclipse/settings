@@ -35,8 +35,12 @@
 	- validation 등 불필요한것 제거
 	windows -> preferences -> validation -> [html, jsp, javascript 등 제외시킴]
 
-   - java tap to space
-   java > formatter > indent.. 설정변경
+	- java tap to space
+	java > formatter > indent.. 설정변경
+
+	- spelling check disable
+
+	- TODO type filter: java.awt 제외...
 
 # plugins
 

@@ -9,3 +9,16 @@
 
 # setup
 TODO
+
+
+# 이슈(20191022)
+	- editor.multiCursorPaste: spread
+	https://stackoverflow.com/questions/58492730/vscode-multiple-cursor-cut-paste-behavior-changed/58492958?noredirect=1#comment103316886_58492958
+		X C-S-i
+		X C-d
+		O C-A- arrow up/down
+		>>> 이전버전 새로설치: https://code.visualstudio.com/updates/v1_38
+		>>>>>> autoupdate stop이 잘안됨.
+
+	- todo gitlens line history
+

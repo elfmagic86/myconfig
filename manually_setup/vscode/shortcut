@@ -61,7 +61,7 @@ editing
 
 
 	- bracket
-	Ctrl+M Jump to matching bracket
+	Ctrl+Shift+\ Jump to matching bracket
 
 
 	- indent

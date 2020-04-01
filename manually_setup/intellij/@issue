@@ -1,0 +1,51 @@
+[gradle ca 이슈 처리]
+
+
+- 명령: `Sync Project With Gradle Files`중 이슈.
+
+	- 원인: java ca https 문제
+	- 처리: gradle 이 사용하는 jvm을 확인하여 아래의 2번 방법으로 적절한 ca 추가해줘야함
+	  참고로그:
+	  ```
+				오후 5:01	Android Studio and Gradle are using different locations for the JDK.
+				Android Studio: C:\Program Files\Java\jdk1.8.0_181
+				Gradle: C:\Program Files\Java\jdk1.8.0_161
+				Using different JDK locations might cause Gradle to spawn multiple daemons
+				when executing tasks for Android Studio and other external processes.
+	  ```
+
+	1. gradle jvm 세팅
+	아래 2번에 설정한 jdk path설정함
+
+	   a. 안드로이드 스튜디오),
+		- Project Strucutre -> jdk location
+		  OR https://stackoverflow.com/questions/18487406/how-do-i-tell-gradle-to-use-specific-jdk-version
+
+		b. intelij
+		Build Tools -> Gradle -> Gradle JVM 설정
+
+	2. java에 ca추가
+	https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000094584-IDEA-Ultimate-2016-3-4-throwing-unable-to-find-valid-certification-path-to-requested-target-when-trying-to-refresh-gradle?page=1#community_comment_360000110684
+	> 1. Jay의 처리방법을 하되
+	> 2. Leon Ren으로 바른 ca를 다시 찾음
+	  내 경우에서는 ca가 여럿있었는데, 최상위, 그다음것 둘다 적용해봄.(todo 바른 ca찾기?)
+
+	- 명령어
+		- 리스트
+		"%JAVA_HOME%/jre/bin/keytool" -list -v -keystore cacerts
+
+		- 상세
+		"%JAVA_HOME%/jre/bin/keytool" -list -v -keystore cacerts -alias MyCertificate
+		"%JAVA_HOME%/jre/bin/keytool" -list -v -keystore cacerts -alias MyCertificate1
+
+		- 추가
+		"%JAVA_HOME%/jre/bin/keytool" -keystore cacerts -importcert -alias MyCertificate -file MyCertificate.cer
+		"%JAVA_HOME%/jre/bin/keytool" -keystore cacerts -importcert -alias MyCertificate1 -file MyCertificate1.cer
+
+		- 삭제
+		"%JAVA_HOME%/jre/bin/keytool" -delete -alias MyCertificate -keystore cacerts
+
+---------------- 참고용 ------------------
+	-. [사용안함] 다른 용도인것 같음 적용이 안됨
+	intellij에 server certification에 위에서 다운받은 인증서(cer)를 추가함.
+		non-trust... 옵션 체크
