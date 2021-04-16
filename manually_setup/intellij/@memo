@@ -15,10 +15,14 @@
 		- HotSwap: 사용안함..
 
 	- project view
-		- Autoscroll from Source
+		- Autoscroll from Source(20200410 쯤 기능이 아래처럼 변경된 것 같다.)
+		> 해당 창에서 설정 아이콘 클릭 -> Always select Opened File
 
 	- animate window: false
 	- spelling 설정 끔
+	- Settings -> File Encoding
+	  > encoding UTF-8로 설정할것.
+	  > *.properties 파일 인코딩도 설정하여, 유니코드 표시가능
 
 - plugins
 	- smarttomcat
@@ -53,6 +57,9 @@
 			- bookmark source: C-S-{1~9}
 			  goto marking: C-{1~9}
 
+			- Show/Hide All Windows: C-S-f12
+			  todo: 에디터만 되는듯
+
 		- search
 			- all: S-S
 			- actions: C-S-a
@@ -65,8 +72,10 @@
 			- find useage: C-g
 
 		- multiple cursor
-			- 단어선택: A-y / A-C-Y
-			- todo 멀티커서 생성??
+			- 단어선택: A-y / C-A-y
+			  C-f 단어 찾기 후, C-A-y 사용도 가능(regex도)
+			- [custom]Clone Caret Above: C-A-Up
+			- [custom]Clone Caret Below: C-A-Down
 
 		- run/debug
 			- debug 실행했던것: A-S-d
@@ -78,9 +87,11 @@
 			- C-f1
 			  퀵픽스...
 
+		- console창
+			- Maximum Tool Window Toggle: C-S-'
+
+
 	- custom
-		- Clone Caret Above: C-A-Up
-		- Clone Caret Below: C-A-Down
 		- Duplicate Entire Lines: A-S-Down
 
 
@@ -93,6 +104,10 @@
 
 - 유용
 	- `VCS | Git: Annotate`: git blame 비슷
+	- Actions -> Show History
+	- Actions -> Show Local Changes
+	>  현재 변경된 파일 확인용
+	> git merge시 충돌파일 resolve 할수있는 기능이 제공됨.
 
 ===
 

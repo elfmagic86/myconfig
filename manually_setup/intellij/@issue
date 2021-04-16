@@ -49,3 +49,13 @@
 	-. [사용안함] 다른 용도인것 같음 적용이 안됨
 	intellij에 server certification에 위에서 다운받은 인증서(cer)를 추가함.
 		non-trust... 옵션 체크
+
+
+[톰캣 플러그인]
+
+이슈: 여러 톰캣 실행시 에러
+	 intelij tomcat Failed to initialize component [Connector[AJP/1.3-8009]
+
+처리: 톰캣서버/conf/server.xml이 기본설정이므로 8009 커넥터를 주석처리함
+      AJP(Apache Jserv Protocal)는 정적 파일서버(아파치) + WAS(tomcat)으로 사용시 정적파일 전용 포트로 활용할 경우 사용함.
+	  개발서버에서는 불필요

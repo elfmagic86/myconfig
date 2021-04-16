@@ -1,0 +1,55 @@
+===
+
+
+ Default keymap의 shortcut
+
+
+- shortcut
+
+	- default
+		- nav
+			- source기준 navi: A-f1
+
+		- code assist: A-enter
+
+		- pannel
+			- pannel toggle: A-{1~9}
+
+		- windows
+			- close: C-f4
+			  closeAll: C-S-esc Close All
+			- split: C-S-A split
+			  switcher: C-TAB
+			     C누른상태에서 1~9, b(build) 등으로 패널이동가능
+			- focus to source: ESC
+			- full source screen:
+				Show/Hide All Windows: C-S-f12
+				에디터만 되는 것같음
+
+		- search
+			- all: S-S
+			- actions: C-S-a
+			- file search all: C-S-n
+			- file content search all: C-S-f
+			- recent
+				- location: C-S-e
+				- file recent: C-e
+			- find Usages: A-f7
+			- usages of excute: C-b
+
+		- multiple cursor
+			- 단어선택: A-j / S-A-j
+			  C-f 단어 찾기 후, C-A-y 사용도 가능(regex도)
+			  현재찾은단어 전체선택: C-S-A-j
+			- duplicate lines: C-d
+
+		- build/run/debug
+			- build: C-f9
+			- debug 실행했던것: S-f9
+
+		- error message view TODO
+			- C-f1
+			  퀵픽스...
+
+		- console창
+			- Maximum Tool Window Toggle: C-S-'

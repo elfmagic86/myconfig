@@ -1,0 +1,31 @@
+
+
+- break point 디버깅중 다른 모듈의 파일로 튕겨남.
+todo 아래 내용으로 캐쉬초기화 가능하지않을까
+https://stackoverflow.com/questions/25471217/intellij-idea-invalid-breakpoint
+> When I have this problem, I go to menu "File -> Invalidate Caches and Restart". The problem is likely that the IntelliJ cache isn't up to date yet.
+>> 안됨.
+
+- 모듈의 동일 패키지.클래스 의 소스에 bp걸었을때 위의 이슈가 발생함.
+  TODO 다른 내용에 bp걸어서 확인하면 정상동작하기에 원인파악은 나중으로 미룸.
+
+
+
+
+
+- junit테스트 클래스가 IDE에서 인식이안됨.
+?? 정확하게는 모르겠고, test source폴더 설정후 rebuild project함
+https://www.jetbrains.com/help/idea/testing.html#add-test-root
+> src/test 폴더 우클릭 -> mark Directory as
+  - test resource folders
+  - test source folders
+
+
+
+- 특정 모듈에 정적 컴파일 빨간줄이 안없어짐(lombok)
+	- Compiler -> annotation processor -> enable anntoation processing
+	- Compiler -> annotation processor
+	  모듈 + / - 영역에 Default로 잡혀있는 경우 해당 에러 유지됨.
+		  `->` 화살표로 Maven default anno...로 변경할수있다.
+
+

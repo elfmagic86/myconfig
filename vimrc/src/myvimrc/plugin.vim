@@ -43,7 +43,7 @@ func! s:load_plugins()
 	" ---
 	" editing
 	" ---
-	Plug 'tpope/vim-surround'
+	" Plug 'tpope/vim-surround'
 
 	Plug 'terryma/vim-multiple-cursors'
 
@@ -51,9 +51,9 @@ func! s:load_plugins()
 
 	" snippet
 	" Track the engine.
-	Plug 'SirVer/ultisnips'
+	" Plug 'SirVer/ultisnips'
 	" Snippets are separated from the engine. Add this if you want them:
-	Plug 'honza/vim-snippets'
+	" Plug 'honza/vim-snippets'
 
 	" ---
 	" autocomplete
@@ -77,14 +77,14 @@ func! s:load_plugins()
 
 	" https://github.com/junegunn/vim-plug/issues/32
 	" ~/.vim/plugged/eclim에 설치해야함
-	Plug g:plug_home.'/eclim'
+	" Plug g:plug_home.'/eclim'
 
 
 	" ---
 	" lint
 	" ---
 	" todo
-	Plug 'w0rp/ale'
+	" Plug 'w0rp/ale'
 
 
 	" ---
@@ -92,12 +92,12 @@ func! s:load_plugins()
 	" ---
 
 	" js
-	Plug 'pangloss/vim-javascript'
+	" Plug 'pangloss/vim-javascript'
 	" vue
-	Plug 'posva/vim-vue'
+	" Plug 'posva/vim-vue'
 
 	" golang
-	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+	" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 	" ---
 	" ctags? Ggrep?
@@ -112,7 +112,7 @@ func! s:load_plugins()
 	" extention/
 
 	" color
-	Plug 'junegunn/seoul256.vim'
+	" Plug 'junegunn/seoul256.vim'
 
 	" statusline, tabline
 	Plug 'ap/vim-buftabline'
@@ -122,15 +122,15 @@ func! s:load_plugins()
 	Plug 'editorconfig/editorconfig-vim'
 
 	" startify
-	Plug 'mhinz/vim-startify'
+	" Plug 'mhinz/vim-startify'
 
 	" markdown
-	Plug 'godlygeek/tabular'
-	Plug 'plasticboy/vim-markdown'
+	" Plug 'godlygeek/tabular'
+	" Plug 'plasticboy/vim-markdown'
 
 	" Add maktaba and bazel to the runtimepath.
 	" (The latter must be installed before it can be used.)
-	Plug 'google/vim-maktaba'
-	Plug 'bazelbuild/vim-bazel'
+	" Plug 'google/vim-maktaba'
+	" Plug 'bazelbuild/vim-bazel'
 
 endfunc

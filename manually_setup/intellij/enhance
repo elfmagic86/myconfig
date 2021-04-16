@@ -1,0 +1,39 @@
+
+
+
+# 2017년 자료
+인텔리j-활용-꿀팁-42가지-정리
+https://www.popit.kr/%EC%9D%B8%ED%85%94%EB%A6%ACj-%ED%99%9C%EC%9A%A9-%EA%BF%80%ED%8C%81-42%EA%B0%80%EC%A7%80-%EC%A0%95%EB%A6%AC/
+
+
+- 탭을 사용하지 말라
+1. Settings -> Editor Tabs -> None
+>  20200506   불편해서 사용안함
+
+2. 대안(이클립스 키맵)
+	- C-S-r: 파일검색
+	- C-e: 최근 파일검색(2차검색가능)
+		   폴더 검색 한정 검색(ex: 	`/exception Error.java`)
+	- C-S-e: 최근 파일위치(2차검색가능)
+
+
+-------
+# todo2
+https://github.com/maksimr/awesome-intellij
+- tab-shifter 플러인: split/move focus tab?
+
+
+
+# todo2
+
+
+- Extend Selection: C-S-up
+현재 기준 스코프 넓어지면서 셀렉션(todo: C-S-down 커스텀 키 수정필요함)
+
+- Presentation Assistant 플러그인
+	기능사용시마다 단축키 툴팁으로 보여줌
+
+- Productivity Guide
+	`Menu -> Productivity Guide` 사용/미사용 기능에 대한 설명이 있기에 살펴볼것
+
+
